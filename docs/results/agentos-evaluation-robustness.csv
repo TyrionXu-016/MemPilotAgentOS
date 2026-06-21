@@ -1,0 +1,5 @@
+planner_name,scenario_count,memory_hit_rate,preference_match_rate,executable_plan_rate,task_completion_rate
+clean,9,1.0,1.0,1.0,1.0
+irrelevant_noise,9,1.0,1.0,1.0,1.0
+conflict_low_confidence,9,1.0,1.0,1.0,1.0
+stale_low_importance,9,1.0,1.0,1.0,1.0

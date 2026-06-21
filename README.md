@@ -17,18 +17,21 @@ The first version intentionally does not call an LLM API or real robot hardware.
 
 - Long-term memory storage with SQLite.
 - Memory retrieval by user, task keywords, tags, importance, and confidence.
-- Two planners:
+- Four planners:
   - `no_memory`: plans only from the current goal.
+  - `preference_only`: retrieves only profile/preference memories.
+  - `feedback_only`: retrieves only task/feedback memories.
   - `layered_memory`: retrieves long-term memory before planning.
 - Skill Registry validation for executable structured plans.
 - Simulated Robot Adapter for embodied terminal output.
 - Evaluation scenarios for:
   - learning companion tasks
   - family education and homework tutoring tasks
+  - home service and life-assistance tasks
 - Paper-ready exports:
   - Markdown experiment report
-  - CSV metrics table
-  - SVG chart
+  - CSV metrics tables
+  - SVG charts
 
 ## Setup
 
@@ -47,7 +50,7 @@ python3 -m pytest
 Expected result:
 
 ```text
-15 passed
+19 passed
 ```
 
 ## Run the Demo
@@ -85,6 +88,11 @@ Generated files:
 - `docs/results/agentos-evaluation.md`
 - `docs/results/agentos-evaluation.csv`
 - `docs/results/agentos-evaluation.svg`
+- `docs/results/agentos-evaluation-scenarios.csv`
+- `docs/results/agentos-evaluation-robustness.csv`
+- `docs/results/agentos-overall.svg`
+- `docs/results/agentos-ablation.svg`
+- `docs/results/agentos-robustness.svg`
 
 The command creates a temporary SQLite database when using the example above. Remove it after export if it is only used for generation:
 
@@ -94,11 +102,13 @@ rm -f data/agentos-results.sqlite data/agentos-results.sqlite-shm data/agentos-r
 
 ## Current Experiment Result
 
-The current evaluation uses six scenarios across learning companion and family education tasks.
+The current evaluation uses nine scenarios across learning companion, family education, and home service tasks.
 
 | Planner | Scenarios | Memory Hit Rate | Preference Match Rate | Executable Plan Rate | Task Completion Rate |
 |---|---:|---:|---:|---:|---:|
-| `no_memory` | 6 | 0.00 | 0.00 | 1.00 | 0.00 |
-| `layered_memory` | 6 | 1.00 | 1.00 | 1.00 | 1.00 |
+| `no_memory` | 9 | 0.00 | 0.00 | 1.00 | 0.00 |
+| `preference_only` | 9 | 1.00 | 1.00 | 1.00 | 0.00 |
+| `feedback_only` | 9 | 1.00 | 0.00 | 1.00 | 1.00 |
+| `layered_memory` | 9 | 1.00 | 1.00 | 1.00 | 1.00 |
 
-See `docs/paper-experiment-section.md` for the thesis experiment section draft.
+See `docs/innovation-experiment-mapping.md` for the innovation-to-experiment mapping and `docs/paper-experiment-section.md` for the thesis experiment section draft.

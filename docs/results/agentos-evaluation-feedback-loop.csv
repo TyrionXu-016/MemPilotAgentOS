@@ -1,0 +1,3 @@
+planner_name,scenario_count,memory_hit_rate,preference_match_rate,executable_plan_rate,task_completion_rate
+before_feedback_writeback,1,1.0,1.0,1.0,0.0
+after_feedback_writeback,1,1.0,1.0,1.0,1.0
