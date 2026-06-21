@@ -4,3 +4,6 @@
 {"user_id":"family001","goal":"陪孩子完成数学分数作业，使用故事化鼓励方式","expected_theme":"story","expected_words":["fraction"]}
 {"user_id":"family001","goal":"继续昨天的家庭作业辅导","expected_theme":"story","expected_words":["fraction"]}
 {"user_id":"family001","goal":"做一轮家庭教育个性化练习","expected_theme":"story","expected_words":["fraction"]}
+{"user_id":"home001","goal":"准备睡前饮水提醒，优先温水","expected_theme":"home","expected_words":["warm_water"]}
+{"user_id":"home001","goal":"查找常用水杯并安排晚间生活辅助","expected_theme":"home","expected_words":["warm_water"]}
+{"user_id":"home001","goal":"安排晚间生活辅助任务","expected_theme":"home","expected_words":["warm_water"]}

@@ -39,6 +39,13 @@ class MemoryRetriever:
             "分数": ["分数", "fraction"],
             "故事": ["故事", "story"],
             "鼓励": ["鼓励", "encouragement"],
+            "睡前": ["睡前", "bedtime"],
+            "饮水": ["饮水", "温水", "warm_water"],
+            "温水": ["温水", "warm_water"],
+            "水杯": ["水杯", "cup"],
+            "书桌": ["书桌", "desk"],
+            "晚间": ["晚间", "evening"],
+            "生活": ["生活", "home"],
         }
         for goal_key, memory_keys in keyword_pairs.items():
             if goal_key in goal and any(memory_key in haystack for memory_key in memory_keys):

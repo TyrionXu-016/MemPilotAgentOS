@@ -67,3 +67,83 @@ def test_layered_memory_planner_supports_family_education(store):
     assert plan.steps[1].params["theme"] == "story"
     assert "fraction" in plan.steps[1].params["words"]
     assert any("故事化" in basis for basis in plan.basis)
+
+
+def test_layered_memory_planner_supports_home_service(store):
+    store.add_memory(
+        MemoryRecord(
+            user_id="home001",
+            memory_type="preference",
+            content="用户晚上不喝咖啡，偏好睡前喝温水",
+            source="seed",
+            importance=0.9,
+            confidence=0.95,
+            tags=["home", "warm_water"],
+        )
+    )
+    store.add_memory(
+        MemoryRecord(
+            user_id="home001",
+            memory_type="scene",
+            content="常用水杯放在书桌右侧",
+            source="seed",
+            importance=0.75,
+            confidence=0.9,
+            tags=["home", "cup", "desk"],
+        )
+    )
+    store.add_memory(
+        MemoryRecord(
+            user_id="home001",
+            memory_type="feedback",
+            content="任务目标：睡前生活辅助；执行反馈：用户希望提前提醒并准备温水",
+            source="runtime",
+            importance=0.8,
+            confidence=0.9,
+            tags=["warm_water"],
+        )
+    )
+    planner = LayeredMemoryPlanner(build_default_registry(), MemoryRetriever(store))
+    plan = planner.plan(user_id="home001", goal="准备睡前饮水提醒，优先温水")
+    assert plan.steps[1].params["theme"] == "home"
+    assert "warm_water" in plan.steps[1].params["words"]
+
+
+def test_layered_memory_planner_ignores_low_confidence_conflicts(store):
+    store.add_memory(
+        MemoryRecord(
+            user_id="u001",
+            memory_type="preference",
+            content="用户喜欢太空主题互动",
+            source="seed",
+            importance=0.9,
+            confidence=0.95,
+            tags=["space"],
+        )
+    )
+    store.add_memory(
+        MemoryRecord(
+            user_id="u001",
+            memory_type="preference",
+            content="用户不喜欢太空主题互动",
+            source="conflict",
+            importance=0.2,
+            confidence=0.2,
+            tags=["space", "conflict"],
+        )
+    )
+    store.add_memory(
+        MemoryRecord(
+            user_id="u001",
+            memory_type="feedback",
+            content="任务目标：复习英语单词；执行反馈：gravity 答错",
+            source="runtime",
+            importance=0.8,
+            confidence=0.9,
+            tags=["gravity"],
+        )
+    )
+    planner = LayeredMemoryPlanner(build_default_registry(), MemoryRetriever(store))
+    plan = planner.plan(user_id="u001", goal="复习英语单词，保持太空主题")
+    assert plan.steps[1].params["theme"] == "space"
+    assert "gravity" in plan.steps[1].params["words"]

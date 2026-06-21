@@ -1,0 +1,13 @@
+planner_name,scenario_count,memory_hit_rate,preference_match_rate,executable_plan_rate,task_completion_rate
+learning:no_memory,3,0.0,0.0,1.0,0.0
+learning:preference_only,3,1.0,1.0,1.0,0.0
+learning:feedback_only,3,1.0,0.0,1.0,1.0
+learning:layered_memory,3,1.0,1.0,1.0,1.0
+family_education:no_memory,3,0.0,0.0,1.0,0.0
+family_education:preference_only,3,1.0,1.0,1.0,0.0
+family_education:feedback_only,3,1.0,0.0,1.0,1.0
+family_education:layered_memory,3,1.0,1.0,1.0,1.0
+home_service:no_memory,3,0.0,0.0,1.0,0.0
+home_service:preference_only,3,1.0,1.0,1.0,0.0
+home_service:feedback_only,3,1.0,0.0,1.0,1.0
+home_service:layered_memory,3,1.0,1.0,1.0,1.0

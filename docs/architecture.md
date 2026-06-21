@@ -8,6 +8,6 @@ The prototype implements a closed loop for embodied AgentOS research:
 4. `SkillRegistry` validates every plan against available skill contracts.
 5. `AgentOSRuntime` executes skills through `SimulatedRobotAdapter`.
 6. Runtime feedback is written back as long-term memory.
-7. `evaluation.py` compares no-memory and layered-memory planners.
+7. `evaluation.py` compares no-memory, preference-only, feedback-only, and layered-memory planners.
 
-The first experiments use learning-companion and family-education embodied scenarios because they verify personalization, repeated task continuity, skill execution, and memory update without physical robot hardware.
+The first experiments use learning-companion, family-education, and home-service embodied scenarios because they verify personalization, repeated task continuity, skill execution, robustness under memory noise, and memory update without physical robot hardware.
