@@ -1,0 +1,6 @@
+{"user_id":"u001","goal":"复习英语单词，保持太空主题","expected_theme":"space","expected_words":["gravity"]}
+{"user_id":"u001","goal":"继续昨天的英语练习","expected_theme":"space","expected_words":["gravity"]}
+{"user_id":"u001","goal":"做一轮个性化复习","expected_theme":"space","expected_words":["gravity"]}
+{"user_id":"family001","goal":"陪孩子完成数学分数作业，使用故事化鼓励方式","expected_theme":"story","expected_words":["fraction"]}
+{"user_id":"family001","goal":"继续昨天的家庭作业辅导","expected_theme":"story","expected_words":["fraction"]}
+{"user_id":"family001","goal":"做一轮家庭教育个性化练习","expected_theme":"story","expected_words":["fraction"]}

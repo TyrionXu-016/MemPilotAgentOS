@@ -1,0 +1,3 @@
+planner_name,scenario_count,memory_hit_rate,preference_match_rate,executable_plan_rate,task_completion_rate
+no_memory,6,0.0,0.0,1.0,0.0
+layered_memory,6,1.0,1.0,1.0,1.0
