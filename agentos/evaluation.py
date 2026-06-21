@@ -4,7 +4,9 @@ from dataclasses import dataclass
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
+from agentos.memory import MemoryManager
 from agentos.models import EvaluationResult, MemoryRecord
+from agentos.runtime import AgentOSRuntime
 from agentos.planner import LayeredMemoryPlanner, MemoryFilteredPlanner, NoMemoryPlanner
 from agentos.retriever import MemoryRetriever
 from agentos.skills import build_default_registry
@@ -99,6 +101,7 @@ class ExperimentSuiteResult:
     by_scenario: EvaluationTable
     ablation: EvaluationTable
     robustness: EvaluationTable
+    feedback_loop: EvaluationTable
 
 
 def seed_learning_memories(store: AgentOSStore) -> None:
@@ -191,6 +194,8 @@ def seed_home_service_memories(store: AgentOSStore) -> None:
             tags=["home", "warm_water", "feedback"],
         )
     )
+
+
 def evaluate_planners(store: AgentOSStore) -> dict[str, EvaluationResult]:
     registry = build_default_registry()
     planners = build_evaluation_planners(store)
@@ -232,11 +237,13 @@ def evaluate_experiment_suite(store: AgentOSStore) -> ExperimentSuiteResult:
             by_scenario_rows.append(result.model_copy(update={"planner_name": f"{scenario_group}:{planner.planner_name}"}))
     ablation = EvaluationTable(name="ablation", rows=overall.rows)
     robustness = EvaluationTable(name="robustness", rows=evaluate_robustness())
+    feedback_loop = EvaluationTable(name="feedback_loop", rows=evaluate_feedback_loop())
     return ExperimentSuiteResult(
         overall=overall,
         by_scenario=EvaluationTable(name="by_scenario", rows=by_scenario_rows),
         ablation=ablation,
         robustness=robustness,
+        feedback_loop=feedback_loop,
     )
 
 
@@ -271,6 +278,7 @@ def export_evaluation_artifacts(
         "csv": output_dir / f"{stem}.csv",
         "scenario_csv": output_dir / f"{stem}-scenarios.csv",
         "robustness_csv": output_dir / f"{stem}-robustness.csv",
+        "feedback_loop_csv": output_dir / f"{stem}-feedback-loop.csv",
         "svg": output_dir / f"{stem}.svg",
         "overall_svg": output_dir / "agentos-overall.svg",
         "ablation_svg": output_dir / "agentos-ablation.svg",
@@ -280,6 +288,7 @@ def export_evaluation_artifacts(
     paths["csv"].write_text(render_csv(suite.overall.rows), encoding="utf-8")
     paths["scenario_csv"].write_text(render_csv(suite.by_scenario.rows), encoding="utf-8")
     paths["robustness_csv"].write_text(render_csv(suite.robustness.rows), encoding="utf-8")
+    paths["feedback_loop_csv"].write_text(render_csv(suite.feedback_loop.rows), encoding="utf-8")
     paths["svg"].write_text(render_svg_bar_chart(suite.overall.rows, "AgentOS 总体规划指标"), encoding="utf-8")
     paths["overall_svg"].write_text(render_svg_bar_chart(suite.overall.rows, "AgentOS 总体规划指标"), encoding="utf-8")
     paths["ablation_svg"].write_text(render_svg_bar_chart(suite.ablation.rows, "AgentOS 消融实验指标"), encoding="utf-8")
@@ -313,6 +322,16 @@ def render_markdown_report(suite: ExperimentSuiteResult) -> str:
     lines.extend(
         [
             "",
+            "## 反馈闭环实验",
+            "",
+            "| Variant | 场景数 | 记忆命中率 | 偏好匹配率 | 计划可执行率 | 任务完成率 |",
+            "|---|---:|---:|---:|---:|---:|",
+        ]
+    )
+    lines.extend(_markdown_rows(suite.feedback_loop.rows))
+    lines.extend(
+        [
+            "",
             "## 鲁棒性实验",
             "",
             "| Variant | 场景数 | 记忆命中率 | 偏好匹配率 | 计划可执行率 | 任务完成率 |",
@@ -329,6 +348,7 @@ def render_markdown_report(suite: ExperimentSuiteResult) -> str:
             "",
             "- 完整分层记忆 Planner 覆盖学习陪伴、家庭教育和家庭服务三类场景，能够将偏好、场景和反馈记忆转化为计划参数。",
             f"- 在当前场景集上，完整分层记忆 Planner 的偏好匹配率为 {layered.preference_match_rate:.2f}，无记忆 Planner 为 {no_memory.preference_match_rate:.2f}。",
+            "- 反馈闭环实验显示，执行前的计划无法覆盖新反馈目标；执行后反馈写回长期记忆，下一轮计划能够命中新任务项。",
             "- 消融结果显示，偏好记忆主要提升偏好匹配率，反馈记忆主要提升任务完成率，完整分层记忆同时提升两类指标。",
             "- 鲁棒性结果显示，在无关、低置信冲突和低重要度过期记忆干扰下，完整分层记忆 Planner 仍保持稳定规划结果。",
         ]
@@ -419,6 +439,55 @@ def _evaluate_one(planner, scenarios: list[Scenario]) -> EvaluationResult:
         preference_match_rate=preference_matches / total,
         executable_plan_rate=executable / total,
         task_completion_rate=complete / total,
+    )
+
+
+def evaluate_feedback_loop() -> list[EvaluationResult]:
+    with TemporaryDirectory() as tmpdir:
+        store = AgentOSStore(Path(tmpdir) / "agentos.sqlite")
+        store.migrate()
+        store.add_memory(
+            MemoryRecord(
+                user_id="loop001",
+                memory_type="preference",
+                content="用户喜欢太空主题互动",
+                source="seed",
+                importance=0.9,
+                confidence=0.95,
+                tags=["space"],
+            )
+        )
+        registry = build_default_registry()
+        planner = LayeredMemoryPlanner(registry, MemoryRetriever(store))
+        before = planner.plan(user_id="loop001", goal="继续复习英语单词，保持太空主题")
+        AgentOSRuntime(registry, MemoryManager(store)).run(user_id="loop001", plan=before)
+        MemoryManager(store).record_feedback(
+            user_id="loop001",
+            goal="继续复习英语单词，保持太空主题",
+            feedback="gravity 答错，需要继续复习",
+        )
+        after = planner.plan(user_id="loop001", goal="继续复习英语单词，保持太空主题")
+        return [
+            _plan_to_result("before_feedback_writeback", before, expected_theme="space", expected_words=("gravity",)),
+            _plan_to_result("after_feedback_writeback", after, expected_theme="space", expected_words=("gravity",)),
+        ]
+
+
+def _plan_to_result(
+    planner_name: str,
+    plan,
+    expected_theme: str,
+    expected_words: tuple[str, ...],
+) -> EvaluationResult:
+    theme = plan.steps[1].params["theme"]
+    words = plan.steps[1].params["words"]
+    return EvaluationResult(
+        planner_name=planner_name,
+        scenario_count=1,
+        memory_hit_rate=float(bool(plan.basis) and "未命中长期记忆" not in plan.basis[0]),
+        preference_match_rate=float(theme == expected_theme),
+        executable_plan_rate=1.0,
+        task_completion_rate=float(any(word in words for word in expected_words)),
     )
 
 

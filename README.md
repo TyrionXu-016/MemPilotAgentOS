@@ -111,4 +111,4 @@ The current evaluation uses nine scenarios across learning companion, family edu
 | `feedback_only` | 9 | 1.00 | 0.00 | 1.00 | 1.00 |
 | `layered_memory` | 9 | 1.00 | 1.00 | 1.00 | 1.00 |
 
-See `docs/paper-experiment-section.md` for the thesis experiment section draft.
+See `docs/innovation-experiment-mapping.md` for the innovation-to-experiment mapping and `docs/paper-experiment-section.md` for the thesis experiment section draft.
