@@ -37,10 +37,33 @@ SCENARIOS = [
         expected_theme="space",
         expected_words=("gravity",),
     ),
+    Scenario(
+        user_id="family001",
+        goal="陪孩子完成数学分数作业，使用故事化鼓励方式",
+        expected_theme="story",
+        expected_words=("fraction",),
+    ),
+    Scenario(
+        user_id="family001",
+        goal="继续昨天的家庭作业辅导",
+        expected_theme="story",
+        expected_words=("fraction",),
+    ),
+    Scenario(
+        user_id="family001",
+        goal="做一轮家庭教育个性化练习",
+        expected_theme="story",
+        expected_words=("fraction",),
+    ),
 ]
 
 
 def seed_learning_memories(store: AgentOSStore) -> None:
+    seed_learning_companion_memories(store)
+    seed_family_education_memories(store)
+
+
+def seed_learning_companion_memories(store: AgentOSStore) -> None:
     store.add_memory(
         MemoryRecord(
             user_id="u001",
@@ -61,6 +84,31 @@ def seed_learning_memories(store: AgentOSStore) -> None:
             importance=0.8,
             confidence=0.9,
             tags=["gravity", "english", "feedback"],
+        )
+    )
+
+
+def seed_family_education_memories(store: AgentOSStore) -> None:
+    store.add_memory(
+        MemoryRecord(
+            user_id="family001",
+            memory_type="preference",
+            content="孩子更容易接受故事化讲解和鼓励式反馈",
+            source="seed",
+            importance=0.9,
+            confidence=0.95,
+            tags=["family", "homework", "story", "encouragement"],
+        )
+    )
+    store.add_memory(
+        MemoryRecord(
+            user_id="family001",
+            memory_type="feedback",
+            content="任务目标：家庭数学作业；执行反馈：分数加减法容易出错，需要继续练习",
+            source="seed",
+            importance=0.8,
+            confidence=0.9,
+            tags=["math", "fraction", "feedback"],
         )
     )
 
@@ -97,7 +145,7 @@ def render_markdown_report(results: dict[str, EvaluationResult]) -> str:
     lines = [
         "# AgentOS 记忆增强规划实验结果",
         "",
-        "本实验对比无长期记忆 Planner 与分层长期记忆 Planner 在学习陪伴场景下的规划质量。"
+        "本实验对比无长期记忆 Planner 与分层长期记忆 Planner 在学习陪伴和家庭教育场景下的规划质量。"
         "所有结果由确定性原型生成，不依赖 LLM API，便于论文复现实验。",
         "",
         "## 指标表",
@@ -118,7 +166,7 @@ def render_markdown_report(results: dict[str, EvaluationResult]) -> str:
             "",
             "## 结论摘要",
             "",
-            "- 分层长期记忆 Planner 能命中用户太空主题偏好和 gravity 错题反馈。",
+            "- 分层长期记忆 Planner 能命中英语学习中的太空主题偏好、gravity 错题反馈，以及家庭教育中的故事化鼓励偏好和分数错题反馈。",
             "- 在当前场景集上，分层长期记忆 Planner 的偏好匹配率为 "
             f"{layered.preference_match_rate:.2f}，无记忆 Planner 为 {no_memory.preference_match_rate:.2f}。",
             "- 两组 Planner 的计划均通过 Skill Registry 校验，说明对比重点是记忆增强带来的规划差异，而非可执行性差异。",

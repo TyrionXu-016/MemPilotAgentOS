@@ -10,4 +10,4 @@ The prototype implements a closed loop for embodied AgentOS research:
 6. Runtime feedback is written back as long-term memory.
 7. `evaluation.py` compares no-memory and layered-memory planners.
 
-The first experiment uses a learning-companion embodied scenario because it can verify personalization, repeated task continuity, skill execution, and memory update without physical robot hardware.
+The first experiments use learning-companion and family-education embodied scenarios because they verify personalization, repeated task continuity, skill execution, and memory update without physical robot hardware.

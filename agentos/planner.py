@@ -38,8 +38,8 @@ class LayeredMemoryPlanner:
         retrieved = self.retriever.retrieve(user_id=user_id, goal=goal, limit=5)
         memories = [item.memory for item in retrieved]
         basis = [memory.content for memory in memories] or ["未命中长期记忆，退化为当前目标规划"]
-        theme = "space" if self._has_space_preference(memories) else "neutral"
-        words = ["gravity"] if self._has_gravity_feedback(memories) else ["review"]
+        theme = self._select_theme(memories)
+        words = self._select_practice_items(memories)
         plan = Plan(
             goal=goal,
             basis=basis,
@@ -63,3 +63,26 @@ class LayeredMemoryPlanner:
 
     def _has_gravity_feedback(self, memories: list) -> bool:
         return any("gravity" in memory.content.lower() or "gravity" in memory.tags for memory in memories)
+
+    def _has_story_preference(self, memories: list) -> bool:
+        return any(
+            "故事" in memory.content or "story" in memory.tags or "encouragement" in memory.tags
+            for memory in memories
+        )
+
+    def _has_fraction_feedback(self, memories: list) -> bool:
+        return any("分数" in memory.content or "fraction" in memory.tags for memory in memories)
+
+    def _select_theme(self, memories: list) -> str:
+        if self._has_space_preference(memories):
+            return "space"
+        if self._has_story_preference(memories):
+            return "story"
+        return "neutral"
+
+    def _select_practice_items(self, memories: list) -> list[str]:
+        if self._has_gravity_feedback(memories):
+            return ["gravity"]
+        if self._has_fraction_feedback(memories):
+            return ["fraction"]
+        return ["review"]

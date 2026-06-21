@@ -33,6 +33,12 @@ class MemoryRetriever:
             "单词": ["单词", "word", "vocabulary"],
             "复习": ["复习", "review", "练习"],
             "gravity": ["gravity"],
+            "家庭": ["家庭", "family"],
+            "作业": ["作业", "homework"],
+            "数学": ["数学", "math"],
+            "分数": ["分数", "fraction"],
+            "故事": ["故事", "story"],
+            "鼓励": ["鼓励", "encouragement"],
         }
         for goal_key, memory_keys in keyword_pairs.items():
             if goal_key in goal and any(memory_key in haystack for memory_key in memory_keys):
