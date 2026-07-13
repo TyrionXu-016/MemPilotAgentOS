@@ -145,7 +145,15 @@ def _run_clean(benchmark: BenchmarkSuite) -> list[CaseRunResult]:
             relevant_ids, conflict_ids = _seed_case(store, case, "clean")
             for planner in _build_planners(store):
                 runs.append(
-                    _run_case(planner, store, case, "clean", relevant_ids, conflict_ids)
+                    _run_case(
+                        planner,
+                        store,
+                        case,
+                        "clean",
+                        "clean",
+                        relevant_ids,
+                        conflict_ids,
+                    )
                 )
     return runs
 
@@ -164,7 +172,15 @@ def _run_robustness(benchmark: BenchmarkSuite) -> list[CaseRunResult]:
                 relevant_ids, conflict_ids = _seed_case(store, case, condition)
                 planner = LayeredMemoryPlanner(build_default_registry(), MemoryRetriever(store))
                 runs.append(
-                    _run_case(planner, store, case, condition, relevant_ids, conflict_ids)
+                    _run_case(
+                        planner,
+                        store,
+                        case,
+                        "robustness",
+                        condition,
+                        relevant_ids,
+                        conflict_ids,
+                    )
                 )
     return runs
 
@@ -187,6 +203,7 @@ def _run_feedback(benchmark: BenchmarkSuite) -> list[CaseRunResult]:
                     planner,
                     store,
                     case,
+                    "feedback_loop",
                     "before_feedback_writeback",
                     relevant_ids,
                     set(),
@@ -205,6 +222,7 @@ def _run_feedback(benchmark: BenchmarkSuite) -> list[CaseRunResult]:
                     planner,
                     store,
                     case,
+                    "feedback_loop",
                     "after_feedback_writeback",
                     relevant_ids,
                     set(),
@@ -236,6 +254,7 @@ def _run_deepseek_job(
             planner,
             store,
             case,
+            "deepseek",
             "clean",
             relevant_ids,
             conflict_ids,
@@ -332,6 +351,7 @@ def _run_case(
     planner,
     store: AgentOSStore,
     case: BenchmarkCase,
+    experiment: str,
     condition: str,
     relevant_ids: set[int],
     conflict_ids: set[int],
@@ -352,6 +372,7 @@ def _run_case(
     return _result_from_plan(
         plan,
         case,
+        experiment,
         condition,
         planner_name or planner.planner_name,
         relevant_ids,
@@ -366,6 +387,7 @@ def _run_case(
 def _result_from_plan(
     plan: Plan | None,
     case: BenchmarkCase,
+    experiment: str,
     condition: str,
     planner_name: str,
     relevant_ids: set[int],
@@ -382,7 +404,8 @@ def _result_from_plan(
     used_ids = set(plan.used_memory_ids) if plan else set()
     metadata = plan.generation_metadata if plan else {}
     return CaseRunResult(
-        run_key=f"{case.case_id}:{condition}:{planner_name}:{repeat_index}",
+        run_key=f"{case.case_id}:{experiment}:{condition}:{planner_name}:{repeat_index}",
+        experiment=experiment,
         case_id=case.case_id,
         scenario_group=case.scenario_group,
         explicitness=case.explicitness,

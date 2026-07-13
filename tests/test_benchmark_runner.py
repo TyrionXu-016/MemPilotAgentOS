@@ -13,6 +13,9 @@ def test_deterministic_suite_has_expected_counts_and_rates():
     assert len(result.clean_runs) == 288
     assert len(result.robustness_runs) == 288
     assert len(result.feedback_runs) == 36
+    assert {run.experiment for run in result.clean_runs} == {"clean"}
+    assert {run.experiment for run in result.robustness_runs} == {"robustness"}
+    assert {run.experiment for run in result.feedback_runs} == {"feedback_loop"}
 
     rates = defaultdict(dict)
     for summary in result.statistics:

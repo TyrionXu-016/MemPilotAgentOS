@@ -25,6 +25,10 @@ def benchmark_sha256(benchmark: BenchmarkSuite) -> str:
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
 
 
+def dataset_file_sha256(path: Path | str) -> str:
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
 def export_benchmark_artifacts(
     benchmark: BenchmarkSuite,
     output_dir: Path | str,
@@ -34,6 +38,7 @@ def export_benchmark_artifacts(
     deepseek_repeats: int = 5,
     concurrency: int = 5,
     cache_path: Path | str | None = None,
+    dataset_path: Path | str | None = None,
 ) -> dict[str, Path]:
     result = run_benchmark(
         benchmark,
@@ -43,7 +48,13 @@ def export_benchmark_artifacts(
         concurrency=concurrency,
         cache_path=cache_path,
     )
-    manifest = _build_manifest(benchmark, result, deepseek_model, deepseek_repeats)
+    manifest = _build_manifest(
+        benchmark,
+        result,
+        deepseek_model,
+        deepseek_repeats,
+        dataset_path=dataset_path,
+    )
     result = result.model_copy(update={"manifest": manifest})
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
@@ -118,6 +129,7 @@ def _build_manifest(
     result: BenchmarkExperimentResult,
     model: str,
     repeats: int,
+    dataset_path: Path | str | None = None,
 ) -> ExperimentManifest:
     try:
         commit = subprocess.run(
@@ -134,7 +146,11 @@ def _build_manifest(
     prompt_hashes = sorted({run.prompt_hash for run in result.deepseek_runs if run.prompt_hash})
     return ExperimentManifest(
         dataset_version=benchmark.version,
-        dataset_sha256=benchmark_sha256(benchmark),
+        dataset_sha256=(
+            dataset_file_sha256(dataset_path)
+            if dataset_path is not None
+            else benchmark_sha256(benchmark)
+        ),
         git_commit=commit,
         python_version=platform.python_version(),
         generated_at=datetime.now(timezone.utc).isoformat(),

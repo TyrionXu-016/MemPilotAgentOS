@@ -50,6 +50,7 @@ class BenchmarkSuite(BaseModel):
 
 class CaseRunResult(BaseModel):
     run_key: str
+    experiment: Literal["clean", "robustness", "feedback_loop", "deepseek"]
     case_id: str
     scenario_group: ScenarioGroup
     explicitness: Explicitness

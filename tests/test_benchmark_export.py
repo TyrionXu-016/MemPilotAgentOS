@@ -1,11 +1,23 @@
+import csv
+import hashlib
 import json
+from collections import Counter
+from pathlib import Path
 
 from agentos.benchmark.dataset import load_benchmark
 from agentos.benchmark.export import export_benchmark_artifacts
 
 
+DATASET = Path("experiments/data/agentos-benchmark-v1.json")
+
+
 def test_export_writes_paper_ready_benchmark_artifacts(tmp_path):
-    paths = export_benchmark_artifacts(load_benchmark(), tmp_path, "agentos-evaluation")
+    paths = export_benchmark_artifacts(
+        load_benchmark(DATASET),
+        tmp_path,
+        "agentos-evaluation",
+        dataset_path=DATASET,
+    )
 
     expected = {
         "markdown",
@@ -38,9 +50,15 @@ def test_export_writes_paper_ready_benchmark_artifacts(tmp_path):
     assert "统计显著性" in markdown
     assert "DeepSeek 对照实验" in markdown
     assert len(cases) == 1 + 288 + 288 + 36
+    case_rows = list(csv.DictReader(paths["cases_csv"].open(encoding="utf-8")))
+    assert Counter(row["experiment"] for row in case_rows) == {
+        "clean": 288,
+        "robustness": 288,
+        "feedback_loop": 36,
+    }
     assert "ci_low,ci_high" in statistics
     assert "adjusted_p_value" in significance
     assert manifest["dataset_version"] == "1.0"
-    assert len(manifest["dataset_sha256"]) == 64
+    assert manifest["dataset_sha256"] == hashlib.sha256(DATASET.read_bytes()).hexdigest()
     assert "AgentOS 95% 置信区间" in paths["confidence_svg"].read_text(encoding="utf-8")
     assert "AgentOS DeepSeek 对照" in paths["deepseek_svg"].read_text(encoding="utf-8")

@@ -82,6 +82,7 @@ def export_results(
         deepseek_repeats=deepseek_repeats,
         concurrency=concurrency,
         cache_path=cache if include_deepseek else None,
+        dataset_path=dataset,
     )
     print({name: str(path) for name, path in paths.items()})
 
