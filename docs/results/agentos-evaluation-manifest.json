@@ -1,0 +1,11 @@
+{
+  "dataset_version": "1.0",
+  "dataset_sha256": "29787dae0da1311a14d7e4489799dda63a3eae49421c444523b1f231651de61a",
+  "git_commit": "1a51558fe577f87ca344879c39596b4536ea7784",
+  "python_version": "3.9.6",
+  "generated_at": "2026-07-13T10:06:24.593803+00:00",
+  "deepseek_model": null,
+  "deepseek_repeats": 0,
+  "system_fingerprints": [],
+  "prompt_hashes": []
+}

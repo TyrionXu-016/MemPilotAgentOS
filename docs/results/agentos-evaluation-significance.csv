@@ -1,0 +1,7 @@
+baseline_planner,comparison_planner,metric,sample_count,baseline_only_successes,comparison_only_successes,p_value,adjusted_p_value
+no_memory,layered_memory,preference_match_rate,72,0,36,2.9103830456733704e-11,1.7462298274040222e-10
+no_memory,layered_memory,task_coverage_rate,72,0,36,2.9103830456733704e-11,1.7462298274040222e-10
+preference_only,layered_memory,preference_match_rate,72,0,0,1.0,1.0
+preference_only,layered_memory,task_coverage_rate,72,0,36,2.9103830456733704e-11,1.7462298274040222e-10
+feedback_only,layered_memory,preference_match_rate,72,0,36,2.9103830456733704e-11,1.7462298274040222e-10
+feedback_only,layered_memory,task_coverage_rate,72,0,0,1.0,1.0

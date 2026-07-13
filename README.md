@@ -36,7 +36,7 @@ python3 -m agentos.cli seed
 python3 -m agentos.cli run "复习英语单词，保持太空主题"
 ```
 
-The current suite contains 40 tests.
+The current suite contains 42 tests.
 
 ## Export Deterministic Results
 

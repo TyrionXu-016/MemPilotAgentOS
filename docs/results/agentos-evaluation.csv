@@ -1,5 +1,5 @@
-planner_name,scenario_count,memory_hit_rate,preference_match_rate,executable_plan_rate,task_completion_rate
-no_memory,9,0.0,0.0,1.0,0.0
-preference_only,9,1.0,1.0,1.0,0.0
-feedback_only,9,1.0,0.0,1.0,1.0
-layered_memory,9,1.0,1.0,1.0,1.0
+planner_name,sample_count,memory_retrieval_precision,memory_retrieval_recall,preference_match_rate,task_coverage_rate,executable_plan_rate,skill_chain_accuracy,conflict_selection_accuracy,api_success_rate
+feedback_only,72,1.0,0.44444444444444403,0.5,1.0,1.0,1.0,1.0,1.0
+layered_memory,72,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+no_memory,72,0.0,0.0,0.5,0.5,1.0,0.9166666666666666,1.0,1.0
+preference_only,72,1.0,0.44444444444444403,1.0,0.5,1.0,1.0,1.0,1.0

@@ -1,0 +1,1 @@
+run_key,experiment,case_id,scenario_group,explicitness,condition,planner_name,repeat_index,success,error,memory_retrieval_precision,memory_retrieval_recall,preference_match,task_coverage,executable_plan,skill_chain_correct,conflict_selection_correct,latency_ms,model,system_fingerprint,prompt_hash,response_id,prompt_tokens,completion_tokens
