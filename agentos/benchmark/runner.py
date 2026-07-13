@@ -51,7 +51,8 @@ class DeepSeekRunCache:
                     self.runs[run.run_key] = run
 
     def get(self, run_key: str) -> CaseRunResult | None:
-        return self.runs.get(run_key)
+        run = self.runs.get(run_key)
+        return run if run and run.success else None
 
     def append(self, run: CaseRunResult) -> None:
         self.path.parent.mkdir(parents=True, exist_ok=True)

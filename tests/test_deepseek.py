@@ -55,6 +55,18 @@ def test_deepseek_planner_builds_valid_plan_from_json():
     registry.validate_plan(plan)
 
 
+def test_deepseek_planner_rejects_unavailable_memory_ids():
+    content = json.loads(_valid_content())
+    content["memory_ids"] = [999]
+    generator = DeepSeekPlanGenerator(request=lambda payload: _response(json.dumps(content)))
+    planner = DeepSeekPlanner(
+        build_default_registry(), generator, planner_name="deepseek_no_memory"
+    )
+
+    with pytest.raises(ValueError, match="unavailable memory IDs"):
+        planner.plan("u001", "复习 gravity")
+
+
 def test_deepseek_generator_retries_empty_content_and_retryable_errors():
     calls = []
 

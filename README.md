@@ -1,114 +1,78 @@
 # MemPilot AgentOS Prototype
 
-This repository contains a deterministic embodied AgentOS prototype for the thesis topic:
+AgentOS is a reproducible software prototype for the thesis topic:
 
 > 融合长期记忆与任务规划的具身智能 AgentOS 设计与实现
 
-The prototype demonstrates a closed loop:
+It implements a closed loop from SQLite long-term memory through retrieval, layered planning, skill validation, simulated embodied execution, feedback writeback, and experiment export.
 
-```text
-long-term memory -> memory retrieval -> layered planning -> skill validation
--> simulated embodied execution -> feedback memory update -> evaluation export
-```
+## Included Experiments
 
-The first version intentionally does not call an LLM API or real robot hardware. This keeps the experiment reproducible and makes the memory-planning mechanism easy to test.
-
-## What It Includes
-
-- Long-term memory storage with SQLite.
-- Memory retrieval by user, task keywords, tags, importance, and confidence.
-- Four planners:
-  - `no_memory`: plans only from the current goal.
-  - `preference_only`: retrieves only profile/preference memories.
-  - `feedback_only`: retrieves only task/feedback memories.
-  - `layered_memory`: retrieves long-term memory before planning.
-- Skill Registry validation for executable structured plans.
-- Simulated Robot Adapter for embodied terminal output.
-- Evaluation scenarios for:
-  - learning companion tasks
-  - family education and homework tutoring tasks
-  - home service and life-assistance tasks
-- Paper-ready exports:
-  - Markdown experiment report
-  - CSV metrics tables
-  - SVG charts
+- 72 balanced cases across learning companion, family education, and home service.
+- Four deterministic planners: `no_memory`, `preference_only`, `feedback_only`, and `layered_memory`.
+- 288 clean planner runs, 288 robustness runs, and 36 feedback-loop runs.
+- Optional `deepseek_no_memory` and `deepseek_layered_memory` baselines with five repeats per case.
+- Wilson confidence intervals, exact McNemar tests, Holm correction, latency metrics, raw case CSV, manifest, and SVG charts.
 
 ## Setup
 
-Use Python 3.9 or newer.
+Use Python 3.9 or newer:
 
 ```bash
 python3 -m pip install -e ".[dev]"
 ```
 
-## Run Tests
+Install the optional DeepSeek client dependency with:
+
+```bash
+python3 -m pip install -e ".[dev,llm]"
+```
+
+## Test And Demo
 
 ```bash
 python3 -m pytest
-```
-
-Expected result:
-
-```text
-19 passed
-```
-
-## Run the Demo
-
-Seed demo memories:
-
-```bash
 python3 -m agentos.cli seed
-```
-
-Run a memory-enhanced plan:
-
-```bash
 python3 -m agentos.cli run "复习英语单词，保持太空主题"
 ```
 
-The generated plan should include:
+The current suite contains 40 tests.
 
-```text
-theme=space
-words=["gravity"]
-```
-
-## Export Paper Results
+## Export Deterministic Results
 
 ```bash
 python3 -m agentos.cli export-results \
   --db data/agentos-results.sqlite \
+  --dataset experiments/data/agentos-benchmark-v1.json \
   --output-dir docs/results \
   --stem agentos-evaluation
 ```
 
-Generated files:
+The legacy `--db` option remains accepted, but benchmark cases use isolated temporary SQLite stores and do not leave the specified database behind.
 
-- `docs/results/agentos-evaluation.md`
-- `docs/results/agentos-evaluation.csv`
-- `docs/results/agentos-evaluation.svg`
-- `docs/results/agentos-evaluation-scenarios.csv`
-- `docs/results/agentos-evaluation-robustness.csv`
-- `docs/results/agentos-overall.svg`
-- `docs/results/agentos-ablation.svg`
-- `docs/results/agentos-robustness.svg`
-
-The command creates a temporary SQLite database when using the example above. Remove it after export if it is only used for generation:
+## Run DeepSeek Baselines
 
 ```bash
-rm -f data/agentos-results.sqlite data/agentos-results.sqlite-shm data/agentos-results.sqlite-wal
+DEEPSEEK_API_KEY=... python3 -m agentos.cli export-results \
+  --dataset experiments/data/agentos-benchmark-v1.json \
+  --output-dir docs/results \
+  --stem agentos-evaluation \
+  --include-deepseek \
+  --deepseek-model deepseek-v4-flash \
+  --deepseek-repeats 5 \
+  --concurrency 5 \
+  --cache .agentos-cache/deepseek-runs.jsonl
 ```
 
-## Current Experiment Result
+The cache is resumable and ignored by Git. Without `DEEPSEEK_API_KEY`, no DeepSeek result is generated or claimed.
 
-The current evaluation uses nine scenarios across learning companion, family education, and home service tasks.
+## Current Deterministic Result
 
-| Planner | Scenarios | Memory Hit Rate | Preference Match Rate | Executable Plan Rate | Task Completion Rate |
+| Planner | Cases | Preference Match | Task Coverage | Executable | Skill Chain |
 |---|---:|---:|---:|---:|---:|
-| `no_memory` | 9 | 0.00 | 0.00 | 1.00 | 0.00 |
-| `preference_only` | 9 | 1.00 | 1.00 | 1.00 | 0.00 |
-| `feedback_only` | 9 | 1.00 | 0.00 | 1.00 | 1.00 |
-| `layered_memory` | 9 | 1.00 | 1.00 | 1.00 | 1.00 |
+| `no_memory` | 72 | 0.50 | 0.50 | 1.00 | 0.92 |
+| `preference_only` | 72 | 1.00 | 0.50 | 1.00 | 1.00 |
+| `feedback_only` | 72 | 0.50 | 1.00 | 1.00 | 1.00 |
+| `layered_memory` | 72 | 1.00 | 1.00 | 1.00 | 1.00 |
 
-See `docs/innovation-experiment-mapping.md` for the innovation-to-experiment mapping and `docs/paper-experiment-section.md` for the thesis experiment section draft.
+See `docs/results/agentos-evaluation.md` for generated results, `docs/paper-experiment-section.md` for the thesis draft, and `docs/innovation-experiment-mapping.md` for the innovation-to-evidence mapping.

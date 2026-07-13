@@ -3,35 +3,14 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-PROFILES = {
-    "learning": [
-        ("space", "gravity"),
-        ("ocean", "pronunciation"),
-        ("sports", "spelling"),
-        ("music", "vocabulary"),
-        ("adventure", "grammar"),
-        ("science", "orbit"),
-    ],
-    "family_education": [
-        ("story", "fraction"),
-        ("visual", "geometry"),
-        ("game", "multiplication"),
-        ("stepwise", "word_problem"),
-        ("encouraging", "division"),
-        ("hands_on", "measurement"),
-    ],
-    "home_service": [
-        ("gentle", "warm_water"),
-        ("quiet", "medicine_reminder"),
-        ("concise", "find_keys"),
-        ("home", "bedtime_light"),
-        ("voice", "door_check"),
-        ("minimal", "room_temperature"),
-    ],
-}
+from agentos.ontology import PROFILES
+
+BENCHMARK_TIMESTAMP = "2026-07-13T00:00:00Z"
 
 LEARNING_SKILLS = [
     "retrieve_learning_history",
@@ -63,6 +42,8 @@ def build_cases() -> list[dict]:
                     "source": "benchmark-v1",
                     "importance": 0.9,
                     "confidence": 0.95,
+                    "created_at": BENCHMARK_TIMESTAMP,
+                    "updated_at": BENCHMARK_TIMESTAMP,
                     "tags": [f"domain:{group}", f"style:{style}", style],
                 },
                 {
@@ -73,6 +54,8 @@ def build_cases() -> list[dict]:
                     "source": "benchmark-v1",
                     "importance": 0.85,
                     "confidence": 0.9,
+                    "created_at": BENCHMARK_TIMESTAMP,
+                    "updated_at": BENCHMARK_TIMESTAMP,
                     "tags": [f"domain:{group}", f"item:{item}", item],
                 },
             ]
@@ -87,6 +70,8 @@ def build_cases() -> list[dict]:
                         "source": "benchmark-v1",
                         "importance": 0.75,
                         "confidence": 0.85,
+                        "created_at": BENCHMARK_TIMESTAMP,
+                        "updated_at": BENCHMARK_TIMESTAMP,
                         "tags": [f"domain:{group}", f"item:{item}", "scene"],
                     }
                 )

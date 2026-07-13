@@ -1,31 +1,40 @@
 # 创新点与实验设计映射
 
-本文实验设计以“创新点 -> 系统机制 -> 实验证据”的链路组织，避免只展示若干 demo 场景。
+实验按“创新点 -> 系统机制 -> 可复核证据”组织，所有聚合结果均可回溯到 612 条离线逐样例记录。
 
-## 创新点一：AgentOS 长期记忆-规划-执行闭环架构
+## 创新点一：长期记忆、规划、执行与反馈闭环
 
-**系统机制**：AgentOS 原型将 `MemoryManager`、`MemoryRetriever`、`Planner`、`SkillRegistry`、`AgentOSRuntime` 和 `RobotAdapter` 连接成闭环。Planner 生成结构化技能计划，Runtime 执行技能并把反馈写回长期记忆。
+系统通过 `MemoryManager`、Retriever、Planner、Skill Registry 和 Runtime 形成反馈写回闭环。18 组隐式任务在写回前的任务覆盖率为 0.00，写回后为 1.00，说明反馈记忆实际改变了下一轮计划，而不是只作为日志保存。
 
-**实验证据**：反馈闭环实验对比 `before_feedback_writeback` 与 `after_feedback_writeback`。执行前系统只有偏好记忆，能够匹配太空主题但无法覆盖 `gravity` 复习目标；执行反馈写回后，下一轮计划能够命中 `gravity`，说明反馈记忆改变了后续规划。
+对应证据：`agentos-evaluation-feedback-loop.csv`。
 
-## 创新点二：面向任务规划的分层长期记忆模型
+## 创新点二：面向任务规划的分层长期记忆
 
-**系统机制**：记忆被划分为 `profile`、`preference`、`task`、`scene` 和 `feedback`，并带有 `importance`、`confidence` 和 `tags` 字段。不同记忆类型映射到不同规划作用：偏好记忆影响主题和交互方式，反馈/任务记忆影响任务目标，场景记忆影响具身上下文。
+偏好记忆负责交互风格，反馈/任务记忆负责任务项，场景记忆提供具身上下文。72 条 clean 样例中：
 
-**实验证据**：消融实验比较 `no_memory`、`preference_only`、`feedback_only` 和 `layered_memory`。结果显示 `preference_only` 只提升偏好匹配率，`feedback_only` 只提升任务完成率，`layered_memory` 同时提升两类指标。
+| Planner | 偏好匹配率 | 任务覆盖率 |
+|---|---:|---:|
+| no_memory | 0.50 | 0.50 |
+| preference_only | 1.00 | 0.50 |
+| feedback_only | 0.50 | 1.00 |
+| layered_memory | 1.00 | 1.00 |
 
-## 创新点三：技能约束下的可执行任务规划
+与 `layered_memory` 相比，缺失相应记忆层的 36 个样例发生配对差异，Holm 校正后 `p < 1.75e-10`。这将偏好记忆和反馈记忆的贡献分别隔离出来。
 
-**系统机制**：Planner 输出不是自然语言步骤，而是 `PlanStep(skill, params)`。所有计划在执行前经过 `SkillRegistry.validate_plan()` 校验，确保技能存在且必填参数齐全。
+对应证据：`agentos-evaluation.csv`、`agentos-evaluation-significance.csv`。
 
-**实验证据**：场景泛化实验中四类 Planner 的计划可执行率均为 1.00，说明不同记忆配置下生成的计划都满足技能约束。相关 negative tests 验证缺少必填参数的计划会被 Skill Registry 拒绝。
+## 创新点三：技能约束下的领域可执行规划
 
-## 创新点四：记忆选择鲁棒性
+Planner 输出结构化 `PlanStep(skill, params)`，计划执行前必须通过 `SkillRegistry.validate_plan()`。四个确定性 Planner 的参数可执行率均为 1.00；完整分层记忆 Planner 在三类场景中的领域技能链正确率为 1.00。无记忆 Planner 在无法辨识隐式家庭服务目标时技能链正确率为 0.92，说明“参数合法”和“领域技能选择正确”是两个不同指标。
 
-**系统机制**：Retriever 结合用户隔离、关键词匹配、记忆类型、`importance` 和 `confidence` 进行排序；低置信、低重要度或其他用户的噪声记忆不会覆盖高置信相关记忆。
+对应证据：`agentos-evaluation-statistics.csv` 和技能负向单元测试。
 
-**实验证据**：鲁棒性实验加入无关记忆、低置信冲突记忆和低重要度过期记忆，`layered_memory` 仍保持偏好匹配率和任务完成率为 1.00。
+## 创新点四：冲突与噪声条件下的记忆选择
 
-## 论文写作建议
+Retriever 结合用户隔离、类型、相关性、importance 和 confidence 排序。`layered_memory` 在 clean、无关噪声、低置信冲突和低重要度历史记录四种条件下，偏好匹配率、任务覆盖率和冲突选择准确率均为 1.00。
 
-论文中应按上述顺序组织：先提出创新点，再说明系统机制，最后引用对应实验表格和图表。实验章节不要只写“做了三个场景”，而应明确每个实验验证哪一条创新点。
+对应证据：`agentos-evaluation-robustness.csv`。
+
+## DeepSeek 外部基线
+
+系统已实现 `deepseek_no_memory` 和 `deepseek_layered_memory`、五轮重复、JSON 校验、技能校验、并发执行和断点恢复。当前仓库未配置 `DEEPSEEK_API_KEY`，因此离线结果中不包含 DeepSeek 数值，论文暂不能把该接口实现写成已验证结论。正式运行后应引用 `agentos-evaluation-deepseek.csv`、manifest 中的 system fingerprint 和多数表决显著性结果。

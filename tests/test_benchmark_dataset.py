@@ -2,6 +2,7 @@ from collections import Counter
 from pathlib import Path
 
 from agentos.benchmark.dataset import load_benchmark
+from agentos.benchmark.export import benchmark_sha256
 
 
 DATASET = Path("experiments/data/agentos-benchmark-v1.json")
@@ -39,3 +40,6 @@ def test_benchmark_references_only_declared_memories():
         assert case.expected_items
         assert case.required_skills
 
+
+def test_benchmark_hash_is_stable_across_loads():
+    assert benchmark_sha256(load_benchmark(DATASET)) == benchmark_sha256(load_benchmark(DATASET))

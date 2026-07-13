@@ -37,6 +37,14 @@ class DeepSeekPlanner:
             [item.model_dump() for item in evidence],
         )
         draft = generation.draft
+        available_memory_ids = {
+            item.memory_id for item in evidence if item.memory_id is not None
+        }
+        unavailable_memory_ids = set(draft.memory_ids) - available_memory_ids
+        if unavailable_memory_ids:
+            raise ValueError(
+                f"DeepSeek referenced unavailable memory IDs: {sorted(unavailable_memory_ids)}"
+            )
         plan = Plan(
             goal=goal,
             basis=[item.content for item in evidence] or ["仅使用当前用户目标，不读取长期记忆"],

@@ -20,6 +20,11 @@ from agentos.benchmark.models import (
 from agentos.benchmark.runner import run_benchmark
 
 
+def benchmark_sha256(benchmark: BenchmarkSuite) -> str:
+    canonical = json.dumps(benchmark.model_dump(mode="json"), ensure_ascii=False, sort_keys=True)
+    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
 def export_benchmark_artifacts(
     benchmark: BenchmarkSuite,
     output_dir: Path | str,
@@ -114,7 +119,6 @@ def _build_manifest(
     model: str,
     repeats: int,
 ) -> ExperimentManifest:
-    canonical = json.dumps(benchmark.model_dump(mode="json"), ensure_ascii=False, sort_keys=True)
     try:
         commit = subprocess.run(
             ["git", "rev-parse", "HEAD"],
@@ -130,7 +134,7 @@ def _build_manifest(
     prompt_hashes = sorted({run.prompt_hash for run in result.deepseek_runs if run.prompt_hash})
     return ExperimentManifest(
         dataset_version=benchmark.version,
-        dataset_sha256=hashlib.sha256(canonical.encode("utf-8")).hexdigest(),
+        dataset_sha256=benchmark_sha256(benchmark),
         git_commit=commit,
         python_version=platform.python_version(),
         generated_at=datetime.now(timezone.utc).isoformat(),

@@ -16,6 +16,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:space",
@@ -30,6 +32,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:gravity",
@@ -68,6 +72,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:space",
@@ -82,6 +88,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:gravity",
@@ -120,6 +128,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:space",
@@ -134,6 +144,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:gravity",
@@ -172,6 +184,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:space",
@@ -186,6 +200,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:gravity",
@@ -224,6 +240,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:ocean",
@@ -238,6 +256,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:pronunciation",
@@ -276,6 +296,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:ocean",
@@ -290,6 +312,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:pronunciation",
@@ -328,6 +352,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:ocean",
@@ -342,6 +368,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:pronunciation",
@@ -380,6 +408,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:ocean",
@@ -394,6 +424,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:pronunciation",
@@ -432,6 +464,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:sports",
@@ -446,6 +480,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:spelling",
@@ -484,6 +520,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:sports",
@@ -498,6 +536,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:spelling",
@@ -536,6 +576,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:sports",
@@ -550,6 +592,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:spelling",
@@ -588,6 +632,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:sports",
@@ -602,6 +648,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:spelling",
@@ -640,6 +688,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:music",
@@ -654,6 +704,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:vocabulary",
@@ -692,6 +744,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:music",
@@ -706,6 +760,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:vocabulary",
@@ -744,6 +800,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:music",
@@ -758,6 +816,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:vocabulary",
@@ -796,6 +856,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:music",
@@ -810,6 +872,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:vocabulary",
@@ -848,6 +912,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:adventure",
@@ -862,6 +928,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:grammar",
@@ -900,6 +968,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:adventure",
@@ -914,6 +984,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:grammar",
@@ -952,6 +1024,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:adventure",
@@ -966,6 +1040,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:grammar",
@@ -1004,6 +1080,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:adventure",
@@ -1018,6 +1096,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:grammar",
@@ -1056,6 +1136,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:science",
@@ -1070,6 +1152,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:orbit",
@@ -1108,6 +1192,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:science",
@@ -1122,6 +1208,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:orbit",
@@ -1160,6 +1248,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:science",
@@ -1174,6 +1264,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:orbit",
@@ -1212,6 +1304,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "style:science",
@@ -1226,6 +1320,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:learning",
             "item:orbit",
@@ -1264,6 +1360,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:story",
@@ -1278,6 +1376,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:fraction",
@@ -1316,6 +1416,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:story",
@@ -1330,6 +1432,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:fraction",
@@ -1368,6 +1472,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:story",
@@ -1382,6 +1488,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:fraction",
@@ -1420,6 +1528,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:story",
@@ -1434,6 +1544,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:fraction",
@@ -1472,6 +1584,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:visual",
@@ -1486,6 +1600,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:geometry",
@@ -1524,6 +1640,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:visual",
@@ -1538,6 +1656,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:geometry",
@@ -1576,6 +1696,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:visual",
@@ -1590,6 +1712,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:geometry",
@@ -1628,6 +1752,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:visual",
@@ -1642,6 +1768,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:geometry",
@@ -1680,6 +1808,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:game",
@@ -1694,6 +1824,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:multiplication",
@@ -1732,6 +1864,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:game",
@@ -1746,6 +1880,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:multiplication",
@@ -1784,6 +1920,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:game",
@@ -1798,6 +1936,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:multiplication",
@@ -1836,6 +1976,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:game",
@@ -1850,6 +1992,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:multiplication",
@@ -1888,6 +2032,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:stepwise",
@@ -1902,6 +2048,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:word_problem",
@@ -1940,6 +2088,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:stepwise",
@@ -1954,6 +2104,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:word_problem",
@@ -1992,6 +2144,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:stepwise",
@@ -2006,6 +2160,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:word_problem",
@@ -2044,6 +2200,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:stepwise",
@@ -2058,6 +2216,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:word_problem",
@@ -2096,6 +2256,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:encouraging",
@@ -2110,6 +2272,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:division",
@@ -2148,6 +2312,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:encouraging",
@@ -2162,6 +2328,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:division",
@@ -2200,6 +2368,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:encouraging",
@@ -2214,6 +2384,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:division",
@@ -2252,6 +2424,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:encouraging",
@@ -2266,6 +2440,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:division",
@@ -2304,6 +2480,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:hands_on",
@@ -2318,6 +2496,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:measurement",
@@ -2356,6 +2536,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:hands_on",
@@ -2370,6 +2552,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:measurement",
@@ -2408,6 +2592,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:hands_on",
@@ -2422,6 +2608,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:measurement",
@@ -2460,6 +2648,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "style:hands_on",
@@ -2474,6 +2664,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:family_education",
             "item:measurement",
@@ -2512,6 +2704,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:gentle",
@@ -2526,6 +2720,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:warm_water",
@@ -2540,6 +2736,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:warm_water",
@@ -2579,6 +2777,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:gentle",
@@ -2593,6 +2793,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:warm_water",
@@ -2607,6 +2809,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:warm_water",
@@ -2646,6 +2850,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:gentle",
@@ -2660,6 +2866,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:warm_water",
@@ -2674,6 +2882,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:warm_water",
@@ -2713,6 +2923,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:gentle",
@@ -2727,6 +2939,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:warm_water",
@@ -2741,6 +2955,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:warm_water",
@@ -2780,6 +2996,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:quiet",
@@ -2794,6 +3012,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:medicine_reminder",
@@ -2808,6 +3028,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:medicine_reminder",
@@ -2847,6 +3069,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:quiet",
@@ -2861,6 +3085,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:medicine_reminder",
@@ -2875,6 +3101,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:medicine_reminder",
@@ -2914,6 +3142,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:quiet",
@@ -2928,6 +3158,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:medicine_reminder",
@@ -2942,6 +3174,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:medicine_reminder",
@@ -2981,6 +3215,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:quiet",
@@ -2995,6 +3231,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:medicine_reminder",
@@ -3009,6 +3247,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:medicine_reminder",
@@ -3048,6 +3288,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:concise",
@@ -3062,6 +3304,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:find_keys",
@@ -3076,6 +3320,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:find_keys",
@@ -3115,6 +3361,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:concise",
@@ -3129,6 +3377,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:find_keys",
@@ -3143,6 +3393,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:find_keys",
@@ -3182,6 +3434,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:concise",
@@ -3196,6 +3450,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:find_keys",
@@ -3210,6 +3466,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:find_keys",
@@ -3249,6 +3507,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:concise",
@@ -3263,6 +3523,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:find_keys",
@@ -3277,6 +3539,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:find_keys",
@@ -3316,6 +3580,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:home",
@@ -3330,6 +3596,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:bedtime_light",
@@ -3344,6 +3612,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:bedtime_light",
@@ -3383,6 +3653,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:home",
@@ -3397,6 +3669,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:bedtime_light",
@@ -3411,6 +3685,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:bedtime_light",
@@ -3450,6 +3726,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:home",
@@ -3464,6 +3742,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:bedtime_light",
@@ -3478,6 +3758,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:bedtime_light",
@@ -3517,6 +3799,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:home",
@@ -3531,6 +3815,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:bedtime_light",
@@ -3545,6 +3831,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:bedtime_light",
@@ -3584,6 +3872,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:voice",
@@ -3598,6 +3888,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:door_check",
@@ -3612,6 +3904,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:door_check",
@@ -3651,6 +3945,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:voice",
@@ -3665,6 +3961,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:door_check",
@@ -3679,6 +3977,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:door_check",
@@ -3718,6 +4018,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:voice",
@@ -3732,6 +4034,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:door_check",
@@ -3746,6 +4050,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:door_check",
@@ -3785,6 +4091,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:voice",
@@ -3799,6 +4107,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:door_check",
@@ -3813,6 +4123,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:door_check",
@@ -3852,6 +4164,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:minimal",
@@ -3866,6 +4180,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:room_temperature",
@@ -3880,6 +4196,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:room_temperature",
@@ -3919,6 +4237,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:minimal",
@@ -3933,6 +4253,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:room_temperature",
@@ -3947,6 +4269,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:room_temperature",
@@ -3986,6 +4310,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:minimal",
@@ -4000,6 +4326,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:room_temperature",
@@ -4014,6 +4342,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:room_temperature",
@@ -4053,6 +4383,8 @@
           "source": "benchmark-v1",
           "importance": 0.9,
           "confidence": 0.95,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "style:minimal",
@@ -4067,6 +4399,8 @@
           "source": "benchmark-v1",
           "importance": 0.85,
           "confidence": 0.9,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:room_temperature",
@@ -4081,6 +4415,8 @@
           "source": "benchmark-v1",
           "importance": 0.75,
           "confidence": 0.85,
+          "created_at": "2026-07-13T00:00:00Z",
+          "updated_at": "2026-07-13T00:00:00Z",
           "tags": [
             "domain:home_service",
             "item:room_temperature",
