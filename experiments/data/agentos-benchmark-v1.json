@@ -1,0 +1,4109 @@
+{
+  "version": "1.0",
+  "cases": [
+    {
+      "case_id": "learning-01-full",
+      "scenario_group": "learning",
+      "user_id": "lear01",
+      "goal": "请用 space 风格完成 gravity 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "lear01.preference",
+          "user_id": "lear01",
+          "memory_type": "preference",
+          "content": "用户偏好 space 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:space",
+            "space"
+          ]
+        },
+        {
+          "memory_key": "lear01.feedback",
+          "user_id": "lear01",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 gravity",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:gravity",
+            "gravity"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear01.preference",
+        "lear01.feedback"
+      ],
+      "expected_style": "space",
+      "expected_items": [
+        "gravity"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-01-style_only",
+      "scenario_group": "learning",
+      "user_id": "lear01",
+      "goal": "请保持 space 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "lear01.preference",
+          "user_id": "lear01",
+          "memory_type": "preference",
+          "content": "用户偏好 space 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:space",
+            "space"
+          ]
+        },
+        {
+          "memory_key": "lear01.feedback",
+          "user_id": "lear01",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 gravity",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:gravity",
+            "gravity"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear01.preference",
+        "lear01.feedback"
+      ],
+      "expected_style": "space",
+      "expected_items": [
+        "gravity"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-01-item_only",
+      "scenario_group": "learning",
+      "user_id": "lear01",
+      "goal": "请继续处理 gravity，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "lear01.preference",
+          "user_id": "lear01",
+          "memory_type": "preference",
+          "content": "用户偏好 space 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:space",
+            "space"
+          ]
+        },
+        {
+          "memory_key": "lear01.feedback",
+          "user_id": "lear01",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 gravity",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:gravity",
+            "gravity"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear01.preference",
+        "lear01.feedback"
+      ],
+      "expected_style": "space",
+      "expected_items": [
+        "gravity"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-01-implicit",
+      "scenario_group": "learning",
+      "user_id": "lear01",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "lear01.preference",
+          "user_id": "lear01",
+          "memory_type": "preference",
+          "content": "用户偏好 space 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:space",
+            "space"
+          ]
+        },
+        {
+          "memory_key": "lear01.feedback",
+          "user_id": "lear01",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 gravity",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:gravity",
+            "gravity"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear01.preference",
+        "lear01.feedback"
+      ],
+      "expected_style": "space",
+      "expected_items": [
+        "gravity"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-02-full",
+      "scenario_group": "learning",
+      "user_id": "lear02",
+      "goal": "请用 ocean 风格完成 pronunciation 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "lear02.preference",
+          "user_id": "lear02",
+          "memory_type": "preference",
+          "content": "用户偏好 ocean 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:ocean",
+            "ocean"
+          ]
+        },
+        {
+          "memory_key": "lear02.feedback",
+          "user_id": "lear02",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 pronunciation",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:pronunciation",
+            "pronunciation"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear02.preference",
+        "lear02.feedback"
+      ],
+      "expected_style": "ocean",
+      "expected_items": [
+        "pronunciation"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-02-style_only",
+      "scenario_group": "learning",
+      "user_id": "lear02",
+      "goal": "请保持 ocean 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "lear02.preference",
+          "user_id": "lear02",
+          "memory_type": "preference",
+          "content": "用户偏好 ocean 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:ocean",
+            "ocean"
+          ]
+        },
+        {
+          "memory_key": "lear02.feedback",
+          "user_id": "lear02",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 pronunciation",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:pronunciation",
+            "pronunciation"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear02.preference",
+        "lear02.feedback"
+      ],
+      "expected_style": "ocean",
+      "expected_items": [
+        "pronunciation"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-02-item_only",
+      "scenario_group": "learning",
+      "user_id": "lear02",
+      "goal": "请继续处理 pronunciation，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "lear02.preference",
+          "user_id": "lear02",
+          "memory_type": "preference",
+          "content": "用户偏好 ocean 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:ocean",
+            "ocean"
+          ]
+        },
+        {
+          "memory_key": "lear02.feedback",
+          "user_id": "lear02",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 pronunciation",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:pronunciation",
+            "pronunciation"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear02.preference",
+        "lear02.feedback"
+      ],
+      "expected_style": "ocean",
+      "expected_items": [
+        "pronunciation"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-02-implicit",
+      "scenario_group": "learning",
+      "user_id": "lear02",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "lear02.preference",
+          "user_id": "lear02",
+          "memory_type": "preference",
+          "content": "用户偏好 ocean 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:ocean",
+            "ocean"
+          ]
+        },
+        {
+          "memory_key": "lear02.feedback",
+          "user_id": "lear02",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 pronunciation",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:pronunciation",
+            "pronunciation"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear02.preference",
+        "lear02.feedback"
+      ],
+      "expected_style": "ocean",
+      "expected_items": [
+        "pronunciation"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-03-full",
+      "scenario_group": "learning",
+      "user_id": "lear03",
+      "goal": "请用 sports 风格完成 spelling 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "lear03.preference",
+          "user_id": "lear03",
+          "memory_type": "preference",
+          "content": "用户偏好 sports 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:sports",
+            "sports"
+          ]
+        },
+        {
+          "memory_key": "lear03.feedback",
+          "user_id": "lear03",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 spelling",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:spelling",
+            "spelling"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear03.preference",
+        "lear03.feedback"
+      ],
+      "expected_style": "sports",
+      "expected_items": [
+        "spelling"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-03-style_only",
+      "scenario_group": "learning",
+      "user_id": "lear03",
+      "goal": "请保持 sports 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "lear03.preference",
+          "user_id": "lear03",
+          "memory_type": "preference",
+          "content": "用户偏好 sports 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:sports",
+            "sports"
+          ]
+        },
+        {
+          "memory_key": "lear03.feedback",
+          "user_id": "lear03",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 spelling",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:spelling",
+            "spelling"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear03.preference",
+        "lear03.feedback"
+      ],
+      "expected_style": "sports",
+      "expected_items": [
+        "spelling"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-03-item_only",
+      "scenario_group": "learning",
+      "user_id": "lear03",
+      "goal": "请继续处理 spelling，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "lear03.preference",
+          "user_id": "lear03",
+          "memory_type": "preference",
+          "content": "用户偏好 sports 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:sports",
+            "sports"
+          ]
+        },
+        {
+          "memory_key": "lear03.feedback",
+          "user_id": "lear03",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 spelling",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:spelling",
+            "spelling"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear03.preference",
+        "lear03.feedback"
+      ],
+      "expected_style": "sports",
+      "expected_items": [
+        "spelling"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-03-implicit",
+      "scenario_group": "learning",
+      "user_id": "lear03",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "lear03.preference",
+          "user_id": "lear03",
+          "memory_type": "preference",
+          "content": "用户偏好 sports 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:sports",
+            "sports"
+          ]
+        },
+        {
+          "memory_key": "lear03.feedback",
+          "user_id": "lear03",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 spelling",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:spelling",
+            "spelling"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear03.preference",
+        "lear03.feedback"
+      ],
+      "expected_style": "sports",
+      "expected_items": [
+        "spelling"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-04-full",
+      "scenario_group": "learning",
+      "user_id": "lear04",
+      "goal": "请用 music 风格完成 vocabulary 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "lear04.preference",
+          "user_id": "lear04",
+          "memory_type": "preference",
+          "content": "用户偏好 music 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:music",
+            "music"
+          ]
+        },
+        {
+          "memory_key": "lear04.feedback",
+          "user_id": "lear04",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 vocabulary",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:vocabulary",
+            "vocabulary"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear04.preference",
+        "lear04.feedback"
+      ],
+      "expected_style": "music",
+      "expected_items": [
+        "vocabulary"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-04-style_only",
+      "scenario_group": "learning",
+      "user_id": "lear04",
+      "goal": "请保持 music 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "lear04.preference",
+          "user_id": "lear04",
+          "memory_type": "preference",
+          "content": "用户偏好 music 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:music",
+            "music"
+          ]
+        },
+        {
+          "memory_key": "lear04.feedback",
+          "user_id": "lear04",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 vocabulary",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:vocabulary",
+            "vocabulary"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear04.preference",
+        "lear04.feedback"
+      ],
+      "expected_style": "music",
+      "expected_items": [
+        "vocabulary"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-04-item_only",
+      "scenario_group": "learning",
+      "user_id": "lear04",
+      "goal": "请继续处理 vocabulary，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "lear04.preference",
+          "user_id": "lear04",
+          "memory_type": "preference",
+          "content": "用户偏好 music 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:music",
+            "music"
+          ]
+        },
+        {
+          "memory_key": "lear04.feedback",
+          "user_id": "lear04",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 vocabulary",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:vocabulary",
+            "vocabulary"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear04.preference",
+        "lear04.feedback"
+      ],
+      "expected_style": "music",
+      "expected_items": [
+        "vocabulary"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-04-implicit",
+      "scenario_group": "learning",
+      "user_id": "lear04",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "lear04.preference",
+          "user_id": "lear04",
+          "memory_type": "preference",
+          "content": "用户偏好 music 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:music",
+            "music"
+          ]
+        },
+        {
+          "memory_key": "lear04.feedback",
+          "user_id": "lear04",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 vocabulary",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:vocabulary",
+            "vocabulary"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear04.preference",
+        "lear04.feedback"
+      ],
+      "expected_style": "music",
+      "expected_items": [
+        "vocabulary"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-05-full",
+      "scenario_group": "learning",
+      "user_id": "lear05",
+      "goal": "请用 adventure 风格完成 grammar 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "lear05.preference",
+          "user_id": "lear05",
+          "memory_type": "preference",
+          "content": "用户偏好 adventure 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:adventure",
+            "adventure"
+          ]
+        },
+        {
+          "memory_key": "lear05.feedback",
+          "user_id": "lear05",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 grammar",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:grammar",
+            "grammar"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear05.preference",
+        "lear05.feedback"
+      ],
+      "expected_style": "adventure",
+      "expected_items": [
+        "grammar"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-05-style_only",
+      "scenario_group": "learning",
+      "user_id": "lear05",
+      "goal": "请保持 adventure 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "lear05.preference",
+          "user_id": "lear05",
+          "memory_type": "preference",
+          "content": "用户偏好 adventure 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:adventure",
+            "adventure"
+          ]
+        },
+        {
+          "memory_key": "lear05.feedback",
+          "user_id": "lear05",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 grammar",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:grammar",
+            "grammar"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear05.preference",
+        "lear05.feedback"
+      ],
+      "expected_style": "adventure",
+      "expected_items": [
+        "grammar"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-05-item_only",
+      "scenario_group": "learning",
+      "user_id": "lear05",
+      "goal": "请继续处理 grammar，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "lear05.preference",
+          "user_id": "lear05",
+          "memory_type": "preference",
+          "content": "用户偏好 adventure 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:adventure",
+            "adventure"
+          ]
+        },
+        {
+          "memory_key": "lear05.feedback",
+          "user_id": "lear05",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 grammar",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:grammar",
+            "grammar"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear05.preference",
+        "lear05.feedback"
+      ],
+      "expected_style": "adventure",
+      "expected_items": [
+        "grammar"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-05-implicit",
+      "scenario_group": "learning",
+      "user_id": "lear05",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "lear05.preference",
+          "user_id": "lear05",
+          "memory_type": "preference",
+          "content": "用户偏好 adventure 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:adventure",
+            "adventure"
+          ]
+        },
+        {
+          "memory_key": "lear05.feedback",
+          "user_id": "lear05",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 grammar",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:grammar",
+            "grammar"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear05.preference",
+        "lear05.feedback"
+      ],
+      "expected_style": "adventure",
+      "expected_items": [
+        "grammar"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-06-full",
+      "scenario_group": "learning",
+      "user_id": "lear06",
+      "goal": "请用 science 风格完成 orbit 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "lear06.preference",
+          "user_id": "lear06",
+          "memory_type": "preference",
+          "content": "用户偏好 science 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:science",
+            "science"
+          ]
+        },
+        {
+          "memory_key": "lear06.feedback",
+          "user_id": "lear06",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 orbit",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:orbit",
+            "orbit"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear06.preference",
+        "lear06.feedback"
+      ],
+      "expected_style": "science",
+      "expected_items": [
+        "orbit"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-06-style_only",
+      "scenario_group": "learning",
+      "user_id": "lear06",
+      "goal": "请保持 science 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "lear06.preference",
+          "user_id": "lear06",
+          "memory_type": "preference",
+          "content": "用户偏好 science 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:science",
+            "science"
+          ]
+        },
+        {
+          "memory_key": "lear06.feedback",
+          "user_id": "lear06",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 orbit",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:orbit",
+            "orbit"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear06.preference",
+        "lear06.feedback"
+      ],
+      "expected_style": "science",
+      "expected_items": [
+        "orbit"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-06-item_only",
+      "scenario_group": "learning",
+      "user_id": "lear06",
+      "goal": "请继续处理 orbit，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "lear06.preference",
+          "user_id": "lear06",
+          "memory_type": "preference",
+          "content": "用户偏好 science 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:science",
+            "science"
+          ]
+        },
+        {
+          "memory_key": "lear06.feedback",
+          "user_id": "lear06",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 orbit",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:orbit",
+            "orbit"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear06.preference",
+        "lear06.feedback"
+      ],
+      "expected_style": "science",
+      "expected_items": [
+        "orbit"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "learning-06-implicit",
+      "scenario_group": "learning",
+      "user_id": "lear06",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "lear06.preference",
+          "user_id": "lear06",
+          "memory_type": "preference",
+          "content": "用户偏好 science 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:learning",
+            "style:science",
+            "science"
+          ]
+        },
+        {
+          "memory_key": "lear06.feedback",
+          "user_id": "lear06",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 orbit",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:learning",
+            "item:orbit",
+            "orbit"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "lear06.preference",
+        "lear06.feedback"
+      ],
+      "expected_style": "science",
+      "expected_items": [
+        "orbit"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-01-full",
+      "scenario_group": "family_education",
+      "user_id": "fami01",
+      "goal": "请用 story 风格完成 fraction 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "fami01.preference",
+          "user_id": "fami01",
+          "memory_type": "preference",
+          "content": "用户偏好 story 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:story",
+            "story"
+          ]
+        },
+        {
+          "memory_key": "fami01.feedback",
+          "user_id": "fami01",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 fraction",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:fraction",
+            "fraction"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami01.preference",
+        "fami01.feedback"
+      ],
+      "expected_style": "story",
+      "expected_items": [
+        "fraction"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-01-style_only",
+      "scenario_group": "family_education",
+      "user_id": "fami01",
+      "goal": "请保持 story 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "fami01.preference",
+          "user_id": "fami01",
+          "memory_type": "preference",
+          "content": "用户偏好 story 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:story",
+            "story"
+          ]
+        },
+        {
+          "memory_key": "fami01.feedback",
+          "user_id": "fami01",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 fraction",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:fraction",
+            "fraction"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami01.preference",
+        "fami01.feedback"
+      ],
+      "expected_style": "story",
+      "expected_items": [
+        "fraction"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-01-item_only",
+      "scenario_group": "family_education",
+      "user_id": "fami01",
+      "goal": "请继续处理 fraction，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "fami01.preference",
+          "user_id": "fami01",
+          "memory_type": "preference",
+          "content": "用户偏好 story 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:story",
+            "story"
+          ]
+        },
+        {
+          "memory_key": "fami01.feedback",
+          "user_id": "fami01",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 fraction",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:fraction",
+            "fraction"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami01.preference",
+        "fami01.feedback"
+      ],
+      "expected_style": "story",
+      "expected_items": [
+        "fraction"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-01-implicit",
+      "scenario_group": "family_education",
+      "user_id": "fami01",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "fami01.preference",
+          "user_id": "fami01",
+          "memory_type": "preference",
+          "content": "用户偏好 story 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:story",
+            "story"
+          ]
+        },
+        {
+          "memory_key": "fami01.feedback",
+          "user_id": "fami01",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 fraction",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:fraction",
+            "fraction"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami01.preference",
+        "fami01.feedback"
+      ],
+      "expected_style": "story",
+      "expected_items": [
+        "fraction"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-02-full",
+      "scenario_group": "family_education",
+      "user_id": "fami02",
+      "goal": "请用 visual 风格完成 geometry 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "fami02.preference",
+          "user_id": "fami02",
+          "memory_type": "preference",
+          "content": "用户偏好 visual 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:visual",
+            "visual"
+          ]
+        },
+        {
+          "memory_key": "fami02.feedback",
+          "user_id": "fami02",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 geometry",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:geometry",
+            "geometry"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami02.preference",
+        "fami02.feedback"
+      ],
+      "expected_style": "visual",
+      "expected_items": [
+        "geometry"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-02-style_only",
+      "scenario_group": "family_education",
+      "user_id": "fami02",
+      "goal": "请保持 visual 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "fami02.preference",
+          "user_id": "fami02",
+          "memory_type": "preference",
+          "content": "用户偏好 visual 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:visual",
+            "visual"
+          ]
+        },
+        {
+          "memory_key": "fami02.feedback",
+          "user_id": "fami02",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 geometry",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:geometry",
+            "geometry"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami02.preference",
+        "fami02.feedback"
+      ],
+      "expected_style": "visual",
+      "expected_items": [
+        "geometry"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-02-item_only",
+      "scenario_group": "family_education",
+      "user_id": "fami02",
+      "goal": "请继续处理 geometry，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "fami02.preference",
+          "user_id": "fami02",
+          "memory_type": "preference",
+          "content": "用户偏好 visual 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:visual",
+            "visual"
+          ]
+        },
+        {
+          "memory_key": "fami02.feedback",
+          "user_id": "fami02",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 geometry",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:geometry",
+            "geometry"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami02.preference",
+        "fami02.feedback"
+      ],
+      "expected_style": "visual",
+      "expected_items": [
+        "geometry"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-02-implicit",
+      "scenario_group": "family_education",
+      "user_id": "fami02",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "fami02.preference",
+          "user_id": "fami02",
+          "memory_type": "preference",
+          "content": "用户偏好 visual 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:visual",
+            "visual"
+          ]
+        },
+        {
+          "memory_key": "fami02.feedback",
+          "user_id": "fami02",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 geometry",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:geometry",
+            "geometry"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami02.preference",
+        "fami02.feedback"
+      ],
+      "expected_style": "visual",
+      "expected_items": [
+        "geometry"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-03-full",
+      "scenario_group": "family_education",
+      "user_id": "fami03",
+      "goal": "请用 game 风格完成 multiplication 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "fami03.preference",
+          "user_id": "fami03",
+          "memory_type": "preference",
+          "content": "用户偏好 game 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:game",
+            "game"
+          ]
+        },
+        {
+          "memory_key": "fami03.feedback",
+          "user_id": "fami03",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 multiplication",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:multiplication",
+            "multiplication"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami03.preference",
+        "fami03.feedback"
+      ],
+      "expected_style": "game",
+      "expected_items": [
+        "multiplication"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-03-style_only",
+      "scenario_group": "family_education",
+      "user_id": "fami03",
+      "goal": "请保持 game 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "fami03.preference",
+          "user_id": "fami03",
+          "memory_type": "preference",
+          "content": "用户偏好 game 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:game",
+            "game"
+          ]
+        },
+        {
+          "memory_key": "fami03.feedback",
+          "user_id": "fami03",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 multiplication",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:multiplication",
+            "multiplication"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami03.preference",
+        "fami03.feedback"
+      ],
+      "expected_style": "game",
+      "expected_items": [
+        "multiplication"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-03-item_only",
+      "scenario_group": "family_education",
+      "user_id": "fami03",
+      "goal": "请继续处理 multiplication，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "fami03.preference",
+          "user_id": "fami03",
+          "memory_type": "preference",
+          "content": "用户偏好 game 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:game",
+            "game"
+          ]
+        },
+        {
+          "memory_key": "fami03.feedback",
+          "user_id": "fami03",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 multiplication",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:multiplication",
+            "multiplication"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami03.preference",
+        "fami03.feedback"
+      ],
+      "expected_style": "game",
+      "expected_items": [
+        "multiplication"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-03-implicit",
+      "scenario_group": "family_education",
+      "user_id": "fami03",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "fami03.preference",
+          "user_id": "fami03",
+          "memory_type": "preference",
+          "content": "用户偏好 game 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:game",
+            "game"
+          ]
+        },
+        {
+          "memory_key": "fami03.feedback",
+          "user_id": "fami03",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 multiplication",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:multiplication",
+            "multiplication"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami03.preference",
+        "fami03.feedback"
+      ],
+      "expected_style": "game",
+      "expected_items": [
+        "multiplication"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-04-full",
+      "scenario_group": "family_education",
+      "user_id": "fami04",
+      "goal": "请用 stepwise 风格完成 word_problem 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "fami04.preference",
+          "user_id": "fami04",
+          "memory_type": "preference",
+          "content": "用户偏好 stepwise 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:stepwise",
+            "stepwise"
+          ]
+        },
+        {
+          "memory_key": "fami04.feedback",
+          "user_id": "fami04",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 word_problem",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:word_problem",
+            "word_problem"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami04.preference",
+        "fami04.feedback"
+      ],
+      "expected_style": "stepwise",
+      "expected_items": [
+        "word_problem"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-04-style_only",
+      "scenario_group": "family_education",
+      "user_id": "fami04",
+      "goal": "请保持 stepwise 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "fami04.preference",
+          "user_id": "fami04",
+          "memory_type": "preference",
+          "content": "用户偏好 stepwise 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:stepwise",
+            "stepwise"
+          ]
+        },
+        {
+          "memory_key": "fami04.feedback",
+          "user_id": "fami04",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 word_problem",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:word_problem",
+            "word_problem"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami04.preference",
+        "fami04.feedback"
+      ],
+      "expected_style": "stepwise",
+      "expected_items": [
+        "word_problem"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-04-item_only",
+      "scenario_group": "family_education",
+      "user_id": "fami04",
+      "goal": "请继续处理 word_problem，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "fami04.preference",
+          "user_id": "fami04",
+          "memory_type": "preference",
+          "content": "用户偏好 stepwise 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:stepwise",
+            "stepwise"
+          ]
+        },
+        {
+          "memory_key": "fami04.feedback",
+          "user_id": "fami04",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 word_problem",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:word_problem",
+            "word_problem"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami04.preference",
+        "fami04.feedback"
+      ],
+      "expected_style": "stepwise",
+      "expected_items": [
+        "word_problem"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-04-implicit",
+      "scenario_group": "family_education",
+      "user_id": "fami04",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "fami04.preference",
+          "user_id": "fami04",
+          "memory_type": "preference",
+          "content": "用户偏好 stepwise 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:stepwise",
+            "stepwise"
+          ]
+        },
+        {
+          "memory_key": "fami04.feedback",
+          "user_id": "fami04",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 word_problem",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:word_problem",
+            "word_problem"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami04.preference",
+        "fami04.feedback"
+      ],
+      "expected_style": "stepwise",
+      "expected_items": [
+        "word_problem"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-05-full",
+      "scenario_group": "family_education",
+      "user_id": "fami05",
+      "goal": "请用 encouraging 风格完成 division 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "fami05.preference",
+          "user_id": "fami05",
+          "memory_type": "preference",
+          "content": "用户偏好 encouraging 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:encouraging",
+            "encouraging"
+          ]
+        },
+        {
+          "memory_key": "fami05.feedback",
+          "user_id": "fami05",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 division",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:division",
+            "division"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami05.preference",
+        "fami05.feedback"
+      ],
+      "expected_style": "encouraging",
+      "expected_items": [
+        "division"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-05-style_only",
+      "scenario_group": "family_education",
+      "user_id": "fami05",
+      "goal": "请保持 encouraging 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "fami05.preference",
+          "user_id": "fami05",
+          "memory_type": "preference",
+          "content": "用户偏好 encouraging 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:encouraging",
+            "encouraging"
+          ]
+        },
+        {
+          "memory_key": "fami05.feedback",
+          "user_id": "fami05",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 division",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:division",
+            "division"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami05.preference",
+        "fami05.feedback"
+      ],
+      "expected_style": "encouraging",
+      "expected_items": [
+        "division"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-05-item_only",
+      "scenario_group": "family_education",
+      "user_id": "fami05",
+      "goal": "请继续处理 division，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "fami05.preference",
+          "user_id": "fami05",
+          "memory_type": "preference",
+          "content": "用户偏好 encouraging 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:encouraging",
+            "encouraging"
+          ]
+        },
+        {
+          "memory_key": "fami05.feedback",
+          "user_id": "fami05",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 division",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:division",
+            "division"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami05.preference",
+        "fami05.feedback"
+      ],
+      "expected_style": "encouraging",
+      "expected_items": [
+        "division"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-05-implicit",
+      "scenario_group": "family_education",
+      "user_id": "fami05",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "fami05.preference",
+          "user_id": "fami05",
+          "memory_type": "preference",
+          "content": "用户偏好 encouraging 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:encouraging",
+            "encouraging"
+          ]
+        },
+        {
+          "memory_key": "fami05.feedback",
+          "user_id": "fami05",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 division",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:division",
+            "division"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami05.preference",
+        "fami05.feedback"
+      ],
+      "expected_style": "encouraging",
+      "expected_items": [
+        "division"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-06-full",
+      "scenario_group": "family_education",
+      "user_id": "fami06",
+      "goal": "请用 hands_on 风格完成 measurement 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "fami06.preference",
+          "user_id": "fami06",
+          "memory_type": "preference",
+          "content": "用户偏好 hands_on 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:hands_on",
+            "hands_on"
+          ]
+        },
+        {
+          "memory_key": "fami06.feedback",
+          "user_id": "fami06",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 measurement",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:measurement",
+            "measurement"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami06.preference",
+        "fami06.feedback"
+      ],
+      "expected_style": "hands_on",
+      "expected_items": [
+        "measurement"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-06-style_only",
+      "scenario_group": "family_education",
+      "user_id": "fami06",
+      "goal": "请保持 hands_on 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "fami06.preference",
+          "user_id": "fami06",
+          "memory_type": "preference",
+          "content": "用户偏好 hands_on 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:hands_on",
+            "hands_on"
+          ]
+        },
+        {
+          "memory_key": "fami06.feedback",
+          "user_id": "fami06",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 measurement",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:measurement",
+            "measurement"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami06.preference",
+        "fami06.feedback"
+      ],
+      "expected_style": "hands_on",
+      "expected_items": [
+        "measurement"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-06-item_only",
+      "scenario_group": "family_education",
+      "user_id": "fami06",
+      "goal": "请继续处理 measurement，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "fami06.preference",
+          "user_id": "fami06",
+          "memory_type": "preference",
+          "content": "用户偏好 hands_on 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:hands_on",
+            "hands_on"
+          ]
+        },
+        {
+          "memory_key": "fami06.feedback",
+          "user_id": "fami06",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 measurement",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:measurement",
+            "measurement"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami06.preference",
+        "fami06.feedback"
+      ],
+      "expected_style": "hands_on",
+      "expected_items": [
+        "measurement"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "family_education-06-implicit",
+      "scenario_group": "family_education",
+      "user_id": "fami06",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "fami06.preference",
+          "user_id": "fami06",
+          "memory_type": "preference",
+          "content": "用户偏好 hands_on 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:family_education",
+            "style:hands_on",
+            "hands_on"
+          ]
+        },
+        {
+          "memory_key": "fami06.feedback",
+          "user_id": "fami06",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 measurement",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:family_education",
+            "item:measurement",
+            "measurement"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "fami06.preference",
+        "fami06.feedback"
+      ],
+      "expected_style": "hands_on",
+      "expected_items": [
+        "measurement"
+      ],
+      "required_skills": [
+        "retrieve_learning_history",
+        "generate_quiz",
+        "ask_question",
+        "evaluate_answer",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-01-full",
+      "scenario_group": "home_service",
+      "user_id": "home01",
+      "goal": "请用 gentle 风格完成 warm_water 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "home01.preference",
+          "user_id": "home01",
+          "memory_type": "preference",
+          "content": "用户偏好 gentle 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:gentle",
+            "gentle"
+          ]
+        },
+        {
+          "memory_key": "home01.feedback",
+          "user_id": "home01",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 warm_water",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:warm_water",
+            "warm_water"
+          ]
+        },
+        {
+          "memory_key": "home01.scene",
+          "user_id": "home01",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 warm_water 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:warm_water",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home01.preference",
+        "home01.feedback",
+        "home01.scene"
+      ],
+      "expected_style": "gentle",
+      "expected_items": [
+        "warm_water"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-01-style_only",
+      "scenario_group": "home_service",
+      "user_id": "home01",
+      "goal": "请保持 gentle 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "home01.preference",
+          "user_id": "home01",
+          "memory_type": "preference",
+          "content": "用户偏好 gentle 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:gentle",
+            "gentle"
+          ]
+        },
+        {
+          "memory_key": "home01.feedback",
+          "user_id": "home01",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 warm_water",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:warm_water",
+            "warm_water"
+          ]
+        },
+        {
+          "memory_key": "home01.scene",
+          "user_id": "home01",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 warm_water 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:warm_water",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home01.preference",
+        "home01.feedback",
+        "home01.scene"
+      ],
+      "expected_style": "gentle",
+      "expected_items": [
+        "warm_water"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-01-item_only",
+      "scenario_group": "home_service",
+      "user_id": "home01",
+      "goal": "请继续处理 warm_water，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "home01.preference",
+          "user_id": "home01",
+          "memory_type": "preference",
+          "content": "用户偏好 gentle 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:gentle",
+            "gentle"
+          ]
+        },
+        {
+          "memory_key": "home01.feedback",
+          "user_id": "home01",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 warm_water",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:warm_water",
+            "warm_water"
+          ]
+        },
+        {
+          "memory_key": "home01.scene",
+          "user_id": "home01",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 warm_water 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:warm_water",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home01.preference",
+        "home01.feedback",
+        "home01.scene"
+      ],
+      "expected_style": "gentle",
+      "expected_items": [
+        "warm_water"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-01-implicit",
+      "scenario_group": "home_service",
+      "user_id": "home01",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "home01.preference",
+          "user_id": "home01",
+          "memory_type": "preference",
+          "content": "用户偏好 gentle 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:gentle",
+            "gentle"
+          ]
+        },
+        {
+          "memory_key": "home01.feedback",
+          "user_id": "home01",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 warm_water",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:warm_water",
+            "warm_water"
+          ]
+        },
+        {
+          "memory_key": "home01.scene",
+          "user_id": "home01",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 warm_water 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:warm_water",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home01.preference",
+        "home01.feedback",
+        "home01.scene"
+      ],
+      "expected_style": "gentle",
+      "expected_items": [
+        "warm_water"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-02-full",
+      "scenario_group": "home_service",
+      "user_id": "home02",
+      "goal": "请用 quiet 风格完成 medicine_reminder 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "home02.preference",
+          "user_id": "home02",
+          "memory_type": "preference",
+          "content": "用户偏好 quiet 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:quiet",
+            "quiet"
+          ]
+        },
+        {
+          "memory_key": "home02.feedback",
+          "user_id": "home02",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 medicine_reminder",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:medicine_reminder",
+            "medicine_reminder"
+          ]
+        },
+        {
+          "memory_key": "home02.scene",
+          "user_id": "home02",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 medicine_reminder 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:medicine_reminder",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home02.preference",
+        "home02.feedback",
+        "home02.scene"
+      ],
+      "expected_style": "quiet",
+      "expected_items": [
+        "medicine_reminder"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-02-style_only",
+      "scenario_group": "home_service",
+      "user_id": "home02",
+      "goal": "请保持 quiet 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "home02.preference",
+          "user_id": "home02",
+          "memory_type": "preference",
+          "content": "用户偏好 quiet 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:quiet",
+            "quiet"
+          ]
+        },
+        {
+          "memory_key": "home02.feedback",
+          "user_id": "home02",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 medicine_reminder",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:medicine_reminder",
+            "medicine_reminder"
+          ]
+        },
+        {
+          "memory_key": "home02.scene",
+          "user_id": "home02",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 medicine_reminder 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:medicine_reminder",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home02.preference",
+        "home02.feedback",
+        "home02.scene"
+      ],
+      "expected_style": "quiet",
+      "expected_items": [
+        "medicine_reminder"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-02-item_only",
+      "scenario_group": "home_service",
+      "user_id": "home02",
+      "goal": "请继续处理 medicine_reminder，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "home02.preference",
+          "user_id": "home02",
+          "memory_type": "preference",
+          "content": "用户偏好 quiet 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:quiet",
+            "quiet"
+          ]
+        },
+        {
+          "memory_key": "home02.feedback",
+          "user_id": "home02",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 medicine_reminder",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:medicine_reminder",
+            "medicine_reminder"
+          ]
+        },
+        {
+          "memory_key": "home02.scene",
+          "user_id": "home02",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 medicine_reminder 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:medicine_reminder",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home02.preference",
+        "home02.feedback",
+        "home02.scene"
+      ],
+      "expected_style": "quiet",
+      "expected_items": [
+        "medicine_reminder"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-02-implicit",
+      "scenario_group": "home_service",
+      "user_id": "home02",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "home02.preference",
+          "user_id": "home02",
+          "memory_type": "preference",
+          "content": "用户偏好 quiet 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:quiet",
+            "quiet"
+          ]
+        },
+        {
+          "memory_key": "home02.feedback",
+          "user_id": "home02",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 medicine_reminder",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:medicine_reminder",
+            "medicine_reminder"
+          ]
+        },
+        {
+          "memory_key": "home02.scene",
+          "user_id": "home02",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 medicine_reminder 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:medicine_reminder",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home02.preference",
+        "home02.feedback",
+        "home02.scene"
+      ],
+      "expected_style": "quiet",
+      "expected_items": [
+        "medicine_reminder"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-03-full",
+      "scenario_group": "home_service",
+      "user_id": "home03",
+      "goal": "请用 concise 风格完成 find_keys 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "home03.preference",
+          "user_id": "home03",
+          "memory_type": "preference",
+          "content": "用户偏好 concise 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:concise",
+            "concise"
+          ]
+        },
+        {
+          "memory_key": "home03.feedback",
+          "user_id": "home03",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 find_keys",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:find_keys",
+            "find_keys"
+          ]
+        },
+        {
+          "memory_key": "home03.scene",
+          "user_id": "home03",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 find_keys 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:find_keys",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home03.preference",
+        "home03.feedback",
+        "home03.scene"
+      ],
+      "expected_style": "concise",
+      "expected_items": [
+        "find_keys"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-03-style_only",
+      "scenario_group": "home_service",
+      "user_id": "home03",
+      "goal": "请保持 concise 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "home03.preference",
+          "user_id": "home03",
+          "memory_type": "preference",
+          "content": "用户偏好 concise 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:concise",
+            "concise"
+          ]
+        },
+        {
+          "memory_key": "home03.feedback",
+          "user_id": "home03",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 find_keys",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:find_keys",
+            "find_keys"
+          ]
+        },
+        {
+          "memory_key": "home03.scene",
+          "user_id": "home03",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 find_keys 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:find_keys",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home03.preference",
+        "home03.feedback",
+        "home03.scene"
+      ],
+      "expected_style": "concise",
+      "expected_items": [
+        "find_keys"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-03-item_only",
+      "scenario_group": "home_service",
+      "user_id": "home03",
+      "goal": "请继续处理 find_keys，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "home03.preference",
+          "user_id": "home03",
+          "memory_type": "preference",
+          "content": "用户偏好 concise 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:concise",
+            "concise"
+          ]
+        },
+        {
+          "memory_key": "home03.feedback",
+          "user_id": "home03",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 find_keys",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:find_keys",
+            "find_keys"
+          ]
+        },
+        {
+          "memory_key": "home03.scene",
+          "user_id": "home03",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 find_keys 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:find_keys",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home03.preference",
+        "home03.feedback",
+        "home03.scene"
+      ],
+      "expected_style": "concise",
+      "expected_items": [
+        "find_keys"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-03-implicit",
+      "scenario_group": "home_service",
+      "user_id": "home03",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "home03.preference",
+          "user_id": "home03",
+          "memory_type": "preference",
+          "content": "用户偏好 concise 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:concise",
+            "concise"
+          ]
+        },
+        {
+          "memory_key": "home03.feedback",
+          "user_id": "home03",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 find_keys",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:find_keys",
+            "find_keys"
+          ]
+        },
+        {
+          "memory_key": "home03.scene",
+          "user_id": "home03",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 find_keys 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:find_keys",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home03.preference",
+        "home03.feedback",
+        "home03.scene"
+      ],
+      "expected_style": "concise",
+      "expected_items": [
+        "find_keys"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-04-full",
+      "scenario_group": "home_service",
+      "user_id": "home04",
+      "goal": "请用 home 风格完成 bedtime_light 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "home04.preference",
+          "user_id": "home04",
+          "memory_type": "preference",
+          "content": "用户偏好 home 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:home",
+            "home"
+          ]
+        },
+        {
+          "memory_key": "home04.feedback",
+          "user_id": "home04",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 bedtime_light",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:bedtime_light",
+            "bedtime_light"
+          ]
+        },
+        {
+          "memory_key": "home04.scene",
+          "user_id": "home04",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 bedtime_light 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:bedtime_light",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home04.preference",
+        "home04.feedback",
+        "home04.scene"
+      ],
+      "expected_style": "home",
+      "expected_items": [
+        "bedtime_light"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-04-style_only",
+      "scenario_group": "home_service",
+      "user_id": "home04",
+      "goal": "请保持 home 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "home04.preference",
+          "user_id": "home04",
+          "memory_type": "preference",
+          "content": "用户偏好 home 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:home",
+            "home"
+          ]
+        },
+        {
+          "memory_key": "home04.feedback",
+          "user_id": "home04",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 bedtime_light",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:bedtime_light",
+            "bedtime_light"
+          ]
+        },
+        {
+          "memory_key": "home04.scene",
+          "user_id": "home04",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 bedtime_light 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:bedtime_light",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home04.preference",
+        "home04.feedback",
+        "home04.scene"
+      ],
+      "expected_style": "home",
+      "expected_items": [
+        "bedtime_light"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-04-item_only",
+      "scenario_group": "home_service",
+      "user_id": "home04",
+      "goal": "请继续处理 bedtime_light，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "home04.preference",
+          "user_id": "home04",
+          "memory_type": "preference",
+          "content": "用户偏好 home 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:home",
+            "home"
+          ]
+        },
+        {
+          "memory_key": "home04.feedback",
+          "user_id": "home04",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 bedtime_light",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:bedtime_light",
+            "bedtime_light"
+          ]
+        },
+        {
+          "memory_key": "home04.scene",
+          "user_id": "home04",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 bedtime_light 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:bedtime_light",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home04.preference",
+        "home04.feedback",
+        "home04.scene"
+      ],
+      "expected_style": "home",
+      "expected_items": [
+        "bedtime_light"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-04-implicit",
+      "scenario_group": "home_service",
+      "user_id": "home04",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "home04.preference",
+          "user_id": "home04",
+          "memory_type": "preference",
+          "content": "用户偏好 home 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:home",
+            "home"
+          ]
+        },
+        {
+          "memory_key": "home04.feedback",
+          "user_id": "home04",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 bedtime_light",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:bedtime_light",
+            "bedtime_light"
+          ]
+        },
+        {
+          "memory_key": "home04.scene",
+          "user_id": "home04",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 bedtime_light 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:bedtime_light",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home04.preference",
+        "home04.feedback",
+        "home04.scene"
+      ],
+      "expected_style": "home",
+      "expected_items": [
+        "bedtime_light"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-05-full",
+      "scenario_group": "home_service",
+      "user_id": "home05",
+      "goal": "请用 voice 风格完成 door_check 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "home05.preference",
+          "user_id": "home05",
+          "memory_type": "preference",
+          "content": "用户偏好 voice 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:voice",
+            "voice"
+          ]
+        },
+        {
+          "memory_key": "home05.feedback",
+          "user_id": "home05",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 door_check",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:door_check",
+            "door_check"
+          ]
+        },
+        {
+          "memory_key": "home05.scene",
+          "user_id": "home05",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 door_check 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:door_check",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home05.preference",
+        "home05.feedback",
+        "home05.scene"
+      ],
+      "expected_style": "voice",
+      "expected_items": [
+        "door_check"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-05-style_only",
+      "scenario_group": "home_service",
+      "user_id": "home05",
+      "goal": "请保持 voice 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "home05.preference",
+          "user_id": "home05",
+          "memory_type": "preference",
+          "content": "用户偏好 voice 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:voice",
+            "voice"
+          ]
+        },
+        {
+          "memory_key": "home05.feedback",
+          "user_id": "home05",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 door_check",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:door_check",
+            "door_check"
+          ]
+        },
+        {
+          "memory_key": "home05.scene",
+          "user_id": "home05",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 door_check 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:door_check",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home05.preference",
+        "home05.feedback",
+        "home05.scene"
+      ],
+      "expected_style": "voice",
+      "expected_items": [
+        "door_check"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-05-item_only",
+      "scenario_group": "home_service",
+      "user_id": "home05",
+      "goal": "请继续处理 door_check，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "home05.preference",
+          "user_id": "home05",
+          "memory_type": "preference",
+          "content": "用户偏好 voice 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:voice",
+            "voice"
+          ]
+        },
+        {
+          "memory_key": "home05.feedback",
+          "user_id": "home05",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 door_check",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:door_check",
+            "door_check"
+          ]
+        },
+        {
+          "memory_key": "home05.scene",
+          "user_id": "home05",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 door_check 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:door_check",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home05.preference",
+        "home05.feedback",
+        "home05.scene"
+      ],
+      "expected_style": "voice",
+      "expected_items": [
+        "door_check"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-05-implicit",
+      "scenario_group": "home_service",
+      "user_id": "home05",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "home05.preference",
+          "user_id": "home05",
+          "memory_type": "preference",
+          "content": "用户偏好 voice 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:voice",
+            "voice"
+          ]
+        },
+        {
+          "memory_key": "home05.feedback",
+          "user_id": "home05",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 door_check",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:door_check",
+            "door_check"
+          ]
+        },
+        {
+          "memory_key": "home05.scene",
+          "user_id": "home05",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 door_check 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:door_check",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home05.preference",
+        "home05.feedback",
+        "home05.scene"
+      ],
+      "expected_style": "voice",
+      "expected_items": [
+        "door_check"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-06-full",
+      "scenario_group": "home_service",
+      "user_id": "home06",
+      "goal": "请用 minimal 风格完成 room_temperature 任务",
+      "explicitness": "full",
+      "memories": [
+        {
+          "memory_key": "home06.preference",
+          "user_id": "home06",
+          "memory_type": "preference",
+          "content": "用户偏好 minimal 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:minimal",
+            "minimal"
+          ]
+        },
+        {
+          "memory_key": "home06.feedback",
+          "user_id": "home06",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 room_temperature",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:room_temperature",
+            "room_temperature"
+          ]
+        },
+        {
+          "memory_key": "home06.scene",
+          "user_id": "home06",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 room_temperature 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:room_temperature",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home06.preference",
+        "home06.feedback",
+        "home06.scene"
+      ],
+      "expected_style": "minimal",
+      "expected_items": [
+        "room_temperature"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-06-style_only",
+      "scenario_group": "home_service",
+      "user_id": "home06",
+      "goal": "请保持 minimal 风格继续之前的任务",
+      "explicitness": "style_only",
+      "memories": [
+        {
+          "memory_key": "home06.preference",
+          "user_id": "home06",
+          "memory_type": "preference",
+          "content": "用户偏好 minimal 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:minimal",
+            "minimal"
+          ]
+        },
+        {
+          "memory_key": "home06.feedback",
+          "user_id": "home06",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 room_temperature",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:room_temperature",
+            "room_temperature"
+          ]
+        },
+        {
+          "memory_key": "home06.scene",
+          "user_id": "home06",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 room_temperature 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:room_temperature",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home06.preference",
+        "home06.feedback",
+        "home06.scene"
+      ],
+      "expected_style": "minimal",
+      "expected_items": [
+        "room_temperature"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-06-item_only",
+      "scenario_group": "home_service",
+      "user_id": "home06",
+      "goal": "请继续处理 room_temperature，沿用之前的交互方式",
+      "explicitness": "item_only",
+      "memories": [
+        {
+          "memory_key": "home06.preference",
+          "user_id": "home06",
+          "memory_type": "preference",
+          "content": "用户偏好 minimal 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:minimal",
+            "minimal"
+          ]
+        },
+        {
+          "memory_key": "home06.feedback",
+          "user_id": "home06",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 room_temperature",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:room_temperature",
+            "room_temperature"
+          ]
+        },
+        {
+          "memory_key": "home06.scene",
+          "user_id": "home06",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 room_temperature 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:room_temperature",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home06.preference",
+        "home06.feedback",
+        "home06.scene"
+      ],
+      "expected_style": "minimal",
+      "expected_items": [
+        "room_temperature"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    },
+    {
+      "case_id": "home_service-06-implicit",
+      "scenario_group": "home_service",
+      "user_id": "home06",
+      "goal": "请按照我的习惯继续昨天未完成的任务",
+      "explicitness": "implicit",
+      "memories": [
+        {
+          "memory_key": "home06.preference",
+          "user_id": "home06",
+          "memory_type": "preference",
+          "content": "用户偏好 minimal 交互风格",
+          "source": "benchmark-v1",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "tags": [
+            "domain:home_service",
+            "style:minimal",
+            "minimal"
+          ]
+        },
+        {
+          "memory_key": "home06.feedback",
+          "user_id": "home06",
+          "memory_type": "feedback",
+          "content": "历史反馈要求继续处理 room_temperature",
+          "source": "benchmark-v1",
+          "importance": 0.85,
+          "confidence": 0.9,
+          "tags": [
+            "domain:home_service",
+            "item:room_temperature",
+            "room_temperature"
+          ]
+        },
+        {
+          "memory_key": "home06.scene",
+          "user_id": "home06",
+          "memory_type": "scene",
+          "content": "家庭场景线索与 room_temperature 任务相关",
+          "source": "benchmark-v1",
+          "importance": 0.75,
+          "confidence": 0.85,
+          "tags": [
+            "domain:home_service",
+            "item:room_temperature",
+            "scene"
+          ]
+        }
+      ],
+      "relevant_memory_keys": [
+        "home06.preference",
+        "home06.feedback",
+        "home06.scene"
+      ],
+      "expected_style": "minimal",
+      "expected_items": [
+        "room_temperature"
+      ],
+      "required_skills": [
+        "retrieve_home_context",
+        "prepare_home_assistance",
+        "notify_user",
+        "verify_home_task",
+        "update_memory"
+      ]
+    }
+  ]
+}
