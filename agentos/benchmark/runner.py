@@ -29,7 +29,8 @@ def run_deterministic_suite(benchmark: BenchmarkSuite) -> BenchmarkExperimentRes
     clean_runs = _run_clean(benchmark)
     robustness_runs = _run_robustness(benchmark)
     feedback_runs = _run_feedback(benchmark)
-    all_runs = clean_runs + robustness_runs + feedback_runs
+    nonduplicate_robustness = [run for run in robustness_runs if run.condition != "clean"]
+    all_runs = clean_runs + nonduplicate_robustness + feedback_runs
     return BenchmarkExperimentResult(
         clean_runs=clean_runs,
         robustness_runs=robustness_runs,
@@ -122,7 +123,10 @@ def run_benchmark(
         concurrency=concurrency,
         cache_path=cache_path,
     )
-    all_runs = result.clean_runs + result.robustness_runs + result.feedback_runs + deepseek_runs
+    nonduplicate_robustness = [
+        run for run in result.robustness_runs if run.condition != "clean"
+    ]
+    all_runs = result.clean_runs + nonduplicate_robustness + result.feedback_runs + deepseek_runs
     return result.model_copy(
         update={
             "deepseek_runs": deepseek_runs,

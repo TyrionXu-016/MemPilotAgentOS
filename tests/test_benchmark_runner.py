@@ -18,6 +18,7 @@ def test_deterministic_suite_has_expected_counts_and_rates():
     for summary in result.statistics:
         if summary.condition == "clean" and summary.scenario_group == "all":
             rates[summary.planner_name][summary.metric] = summary.value
+            assert summary.sample_count == 72
 
     assert rates["no_memory"]["preference_match_rate"] == 0.5
     assert rates["no_memory"]["task_coverage_rate"] == 0.5
