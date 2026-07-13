@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from agentos.models import MemoryRecord, MemoryType, Plan, PlanStep
+from agentos.models import MemoryEvidence, MemoryType, Plan, PlanContext, PlanStep, RetrievedMemory
+from agentos.ontology import Selection, select_from_goal, select_from_memories
 from agentos.retriever import MemoryRetriever
 from agentos.skills import SkillRegistry
 
@@ -12,18 +13,13 @@ class NoMemoryPlanner:
         self.registry = registry
 
     def plan(self, user_id: str, goal: str) -> Plan:
-        words = ["review"]
-        plan = Plan(
+        selected = select_from_goal(goal)
+        plan = _build_plan(
+            user_id=user_id,
             goal=goal,
-            basis=["仅使用当前用户目标，不读取长期记忆"],
             planner_name=self.planner_name,
-            steps=[
-                PlanStep(skill="retrieve_learning_history", params={"user_id": user_id}),
-                PlanStep(skill="generate_quiz", params={"theme": "neutral", "words": words}),
-                PlanStep(skill="ask_question", params={"mode": "interactive"}),
-                PlanStep(skill="evaluate_answer", params={"expected_words": words}),
-                PlanStep(skill="update_memory", params={"feedback": "completed generic review"}),
-            ],
+            selected=selected,
+            basis=["仅使用当前用户目标，不读取长期记忆"],
         )
         self.registry.validate_plan(plan)
         return plan
@@ -47,103 +43,41 @@ class LayeredMemoryPlanner:
             self.planner_name = planner_name
 
     def plan(self, user_id: str, goal: str) -> Plan:
-        retrieved = self.retriever.retrieve(user_id=user_id, goal=goal, limit=5)
-        memories = self._filter_memories([item.memory for item in retrieved])
+        retrieved = self._filter_retrieved(self.retriever.retrieve(user_id=user_id, goal=goal, limit=5))
+        memories = [item.memory for item in retrieved]
+        goal_selection = select_from_goal(goal)
+        memory_selection = select_from_memories(memories)
+        selected = Selection(
+            scenario_group=memory_selection.scenario_group or goal_selection.scenario_group,
+            style=goal_selection.style or memory_selection.style,
+            item=goal_selection.item or memory_selection.item,
+            used_memory_ids=memory_selection.used_memory_ids,
+        )
         basis = [memory.content for memory in memories] or ["未命中长期记忆，退化为当前目标规划"]
-        theme = self._select_theme(memories)
-        words = self._select_practice_items(memories)
-        plan = Plan(
+        evidence = [
+            MemoryEvidence(
+                memory_id=item.memory.id,
+                memory_type=item.memory.memory_type,
+                content=item.memory.content,
+                score=item.score,
+            )
+            for item in retrieved
+        ]
+        plan = _build_plan(
+            user_id=user_id,
             goal=goal,
-            basis=basis,
             planner_name=self.planner_name,
-            steps=[
-                PlanStep(skill="retrieve_learning_history", params={"user_id": user_id}),
-                PlanStep(skill="generate_quiz", params={"theme": theme, "words": words}),
-                PlanStep(skill="ask_question", params={"mode": "interactive"}),
-                PlanStep(skill="evaluate_answer", params={"expected_words": words}),
-                PlanStep(
-                    skill="update_memory",
-                    params={"feedback": f"reviewed {', '.join(words)} with theme {theme}"},
-                ),
-            ],
+            selected=selected,
+            basis=basis,
+            evidence=evidence,
         )
         self.registry.validate_plan(plan)
         return plan
 
-    def _filter_memories(self, memories: list[MemoryRecord]) -> list[MemoryRecord]:
+    def _filter_retrieved(self, retrieved: list[RetrievedMemory]) -> list[RetrievedMemory]:
         if self.allowed_memory_types is None:
-            return memories
-        return [memory for memory in memories if memory.memory_type in self.allowed_memory_types]
-
-    def _has_space_preference(self, memories: list[MemoryRecord]) -> bool:
-        return any(
-            memory.memory_type in {"preference", "profile"}
-            and ("太空" in memory.content or "space" in memory.tags)
-            for memory in memories
-        )
-
-    def _has_gravity_feedback(self, memories: list[MemoryRecord]) -> bool:
-        return any(
-            memory.memory_type in {"feedback", "task"}
-            and ("gravity" in memory.content.lower() or "gravity" in memory.tags)
-            for memory in memories
-        )
-
-    def _has_story_preference(self, memories: list[MemoryRecord]) -> bool:
-        return any(
-            memory.memory_type in {"preference", "profile"}
-            and ("故事" in memory.content or "story" in memory.tags or "encouragement" in memory.tags)
-            for memory in memories
-        )
-
-    def _has_fraction_feedback(self, memories: list[MemoryRecord]) -> bool:
-        return any(
-            memory.memory_type in {"feedback", "task"}
-            and ("分数" in memory.content or "fraction" in memory.tags)
-            for memory in memories
-        )
-
-    def _has_home_preference(self, memories: list[MemoryRecord]) -> bool:
-        return any(
-            memory.memory_type in {"preference", "profile", "scene"}
-            and (
-                "温水" in memory.content
-                or "书桌" in memory.content
-                or "home" in memory.tags
-                or "warm_water" in memory.tags
-            )
-            for memory in memories
-        )
-
-    def _has_warm_water_feedback(self, memories: list[MemoryRecord]) -> bool:
-        return any(
-            memory.memory_type in {"feedback", "task", "scene"}
-            and (
-                "温水" in memory.content
-                or "睡前" in memory.content
-                or "水杯" in memory.content
-                or "warm_water" in memory.tags
-            )
-            for memory in memories
-        )
-
-    def _select_theme(self, memories: list[MemoryRecord]) -> str:
-        if self._has_space_preference(memories):
-            return "space"
-        if self._has_story_preference(memories):
-            return "story"
-        if self._has_home_preference(memories):
-            return "home"
-        return "neutral"
-
-    def _select_practice_items(self, memories: list[MemoryRecord]) -> list[str]:
-        if self._has_gravity_feedback(memories):
-            return ["gravity"]
-        if self._has_fraction_feedback(memories):
-            return ["fraction"]
-        if self._has_warm_water_feedback(memories):
-            return ["warm_water"]
-        return ["review"]
+            return retrieved
+        return [item for item in retrieved if item.memory.memory_type in self.allowed_memory_types]
 
 
 class MemoryFilteredPlanner(LayeredMemoryPlanner):
@@ -154,9 +88,46 @@ class MemoryFilteredPlanner(LayeredMemoryPlanner):
         planner_name: str,
         allowed_memory_types: set[MemoryType],
     ):
-        super().__init__(
-            registry=registry,
-            retriever=retriever,
-            allowed_memory_types=allowed_memory_types,
-            planner_name=planner_name,
-        )
+        super().__init__(registry, retriever, allowed_memory_types, planner_name)
+
+
+def _build_plan(
+    user_id: str,
+    goal: str,
+    planner_name: str,
+    selected: Selection,
+    basis: list[str],
+    evidence: list[MemoryEvidence] | None = None,
+) -> Plan:
+    group = selected.scenario_group or "learning"
+    style = selected.style or "neutral"
+    items = [selected.item or "review"]
+    if group == "home_service":
+        steps = [
+            PlanStep(skill="retrieve_home_context", params={"user_id": user_id}),
+            PlanStep(skill="prepare_home_assistance", params={"theme": style, "words": items}),
+            PlanStep(skill="notify_user", params={"mode": "interactive"}),
+            PlanStep(skill="verify_home_task", params={"expected_words": items}),
+            PlanStep(skill="update_memory", params={"feedback": f"completed {', '.join(items)} with {style}"}),
+        ]
+    else:
+        steps = [
+            PlanStep(skill="retrieve_learning_history", params={"user_id": user_id}),
+            PlanStep(skill="generate_quiz", params={"theme": style, "words": items}),
+            PlanStep(skill="ask_question", params={"mode": "interactive"}),
+            PlanStep(skill="evaluate_answer", params={"expected_words": items}),
+            PlanStep(skill="update_memory", params={"feedback": f"reviewed {', '.join(items)} with theme {style}"}),
+        ]
+    return Plan(
+        goal=goal,
+        basis=basis,
+        steps=steps,
+        planner_name=planner_name,
+        context=PlanContext(
+            scenario_group=group,
+            interaction_style=style,
+            task_items=items,
+        ),
+        evidence=evidence or [],
+        used_memory_ids=list(selected.used_memory_ids),
+    )

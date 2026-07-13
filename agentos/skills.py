@@ -39,6 +39,42 @@ def build_default_registry() -> SkillRegistry:
     registry = SkillRegistry()
     registry.register(
         SkillSpec(
+            name="retrieve_home_context",
+            description="Read home-service scene and task context",
+            required_params=["user_id"],
+            output_type="home_context",
+        ),
+        lambda params: {"user_id": params["user_id"], "context_loaded": True},
+    )
+    registry.register(
+        SkillSpec(
+            name="prepare_home_assistance",
+            description="Prepare a home assistance task",
+            required_params=["theme", "words"],
+            output_type="home_task",
+        ),
+        lambda params: {"style": params["theme"], "tasks": params["words"]},
+    )
+    registry.register(
+        SkillSpec(
+            name="notify_user",
+            description="Notify the user through the simulated terminal",
+            required_params=["mode"],
+            output_type="notification",
+        ),
+        lambda params: {"mode": params["mode"], "notified": True},
+    )
+    registry.register(
+        SkillSpec(
+            name="verify_home_task",
+            description="Verify expected home assistance tasks",
+            required_params=["expected_words"],
+            output_type="verification",
+        ),
+        lambda params: {"completed": True, "tasks": params["expected_words"]},
+    )
+    registry.register(
+        SkillSpec(
             name="retrieve_learning_history",
             description="Read recent learning history",
             required_params=["user_id"],

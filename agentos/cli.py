@@ -5,7 +5,10 @@ from pathlib import Path
 import typer
 from rich import print
 
-from agentos.evaluation import evaluate_planners, export_evaluation_artifacts, seed_learning_memories
+from agentos.benchmark.dataset import DEFAULT_DATASET, load_benchmark
+from agentos.benchmark.export import export_benchmark_artifacts
+from agentos.benchmark.runner import run_deterministic_suite
+from agentos.evaluation import seed_learning_memories
 from agentos.memory import MemoryManager
 from agentos.planner import LayeredMemoryPlanner
 from agentos.retriever import MemoryRetriever
@@ -46,22 +49,40 @@ def run(goal: str, user_id: str = "u001", db: Path = Path("data/agentos.sqlite")
 
 @app.command()
 def evaluate(db: Path = Path("data/agentos.sqlite")) -> None:
-    store = open_store(db)
-    results = evaluate_planners(store)
-    print({name: result.model_dump() for name, result in results.items()})
+    _ = db
+    result = run_deterministic_suite(load_benchmark())
+    summaries = [
+        summary.model_dump()
+        for summary in result.statistics
+        if summary.condition == "clean" and summary.scenario_group == "all"
+    ]
+    print(summaries)
 
 
 @app.command()
 def export_results(
     db: Path = Path("data/agentos.sqlite"),
+    dataset: Path = DEFAULT_DATASET,
     output_dir: Path = Path("docs/results"),
     stem: str = "agentos-evaluation",
     seed_demo: bool = True,
+    include_deepseek: bool = False,
+    deepseek_model: str = "deepseek-v4-flash",
+    deepseek_repeats: int = 5,
+    concurrency: int = 5,
+    cache: Path = Path(".agentos-cache/deepseek-runs.jsonl"),
 ) -> None:
-    store = open_store(db)
-    if seed_demo:
-        seed_learning_memories(store)
-    paths = export_evaluation_artifacts(store=store, output_dir=output_dir, stem=stem)
+    _ = db, seed_demo
+    paths = export_benchmark_artifacts(
+        benchmark=load_benchmark(dataset),
+        output_dir=output_dir,
+        stem=stem,
+        include_deepseek=include_deepseek,
+        deepseek_model=deepseek_model,
+        deepseek_repeats=deepseek_repeats,
+        concurrency=concurrency,
+        cache_path=cache if include_deepseek else None,
+    )
     print({name: str(path) for name, path in paths.items()})
 
 

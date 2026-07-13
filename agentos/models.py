@@ -47,11 +47,28 @@ class PlanStep(BaseModel):
     params: dict[str, Any] = Field(default_factory=dict)
 
 
+class PlanContext(BaseModel):
+    scenario_group: str = "learning"
+    interaction_style: str = "neutral"
+    task_items: list[str] = Field(default_factory=lambda: ["review"])
+
+
+class MemoryEvidence(BaseModel):
+    memory_id: int | None
+    memory_type: MemoryType
+    content: str
+    score: float
+
+
 class Plan(BaseModel):
     goal: str
     basis: list[str]
     steps: list[PlanStep]
     planner_name: str = "layered_memory"
+    context: PlanContext = Field(default_factory=PlanContext)
+    evidence: list[MemoryEvidence] = Field(default_factory=list)
+    used_memory_ids: list[int] = Field(default_factory=list)
+    generation_metadata: dict[str, Any] = Field(default_factory=dict)
 
 
 class ExecutionEvent(BaseModel):
